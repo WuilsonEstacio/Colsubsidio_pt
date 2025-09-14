@@ -22,7 +22,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 2. [Objetivo](#objetivo)  
 3. [Modelo de Fuga](#Modelo-de-fuga)  
    3.1 [Exploración y Evaluación de Datos (EDA)](#Eda)  
-      3.1.1 [Data Quality](#Data-quality)  
+      3.1.1 [Data Quality](#Data-Quality)  
       3.1.2 [Estadísticas](#Estadísticas)  
       3.1.3 [Hipótesis preliminares](#Hipótesis-preliminares)  
 4. [Ejercicios de numeral Dos](#Ejercicios-de-numeral-dos)  
@@ -116,7 +116,14 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 ## EDA
 Para este modelo de fuga inicialmente para ello cargamos los datos de train (train_test_demograficas,train_test_subsidios, train) para la exploracion de los datos, con un total de 50001 clientes unicos o Id unicos
 
-### Data-quality
+### Data-Quality
+1 Valores nulos se identificaron en la ssiguientes colunas:
+Gestionable           48589
+Cancelacion           48589
+ANO_MES               48589
+TIPO                  48589
+Retencion             48589
+estrato               45885
 
 
 # Ejercicios-de-numeral-dos
