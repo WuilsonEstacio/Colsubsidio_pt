@@ -117,13 +117,14 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 Para este modelo de fuga inicialmente para ello cargamos los datos de train (train_test_demograficas,train_test_subsidios, train) para la exploracion de los datos, con un total de 50001 clientes unicos o Id unicos
 
 ### Data-Quality
-1 Valores nulos se identificaron en la ssiguientes colunas:
-Gestionable           48589
-Cancelacion           48589
-ANO_MES               48589
-TIPO                  48589
-Retencion             48589
-estrato               45885
+1 Valores nulos se identificaron solo en la siguientes colunas:
+- Gestionable           48589
+- Cancelacion           48589
+- ANO_MES               48589
+- TIPO                  48589
+- Retencion             48589
+- estrato               45885
+  
 
 
 # Ejercicios-de-numeral-dos
