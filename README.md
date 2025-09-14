@@ -28,7 +28,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 
 ## introduccion
 
-# ¿Qué es Colsubsidio?
+### ¿Qué es Colsubsidio?
 
 Es una **Caja de Compensación Familiar en Colombia**, entidad privada, de naturaleza social y sin ánimo de lucro, que administra recursos del subsidio familiar y presta servicios a trabajadores y sus familias en distintos sectores.  
 
@@ -55,7 +55,7 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 
 ## Modelofuga
 
-# Objetivo: En este caso, se requiere establecer la probabilidad que un cliente en una de sus líneas de negocio (Crédito) se vaya o no. Para esto se tiene un histórico de datos de los clientes que han solicitado un tipo de retiro y los que no lo han expresado.
+### Objetivo: En este caso, se requiere establecer la probabilidad que un cliente en una de sus líneas de negocio (Crédito) se vaya o no. Para esto se tiene un histórico de datos de los clientes que han solicitado un tipo de retiro y los que no lo han expresado.
 
 ## 📑 Columnas Relevantes
 
