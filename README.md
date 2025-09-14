@@ -17,7 +17,14 @@
 Este documento describe el proceso seguido para **explorar** los datos, **identificar** variables relevantes y **definir** un modelo heurístico para solucionar cada uno de los puntos planteados en la prueba tecnica.
 
 
-# Punto 1
+## Tabla de Contenido
+1. [Introducción](#introducción)  
+2. [Objetivo](#objetivo)  
+3. [Metodo](#Punto1) 
+
+
+
+## introduccion
 
 # ¿Qué es Colsubsidio?
 
@@ -36,4 +43,16 @@ Pero existen otras UES, como se muestra en la siguiente imagen:
   <img src="./Imagenes/UES_Colsubsidio.png" alt="UES Disponibles" title="UES Disponibles" width="500"/>
 </p>
 
+---
 
+## Objetivo
+El objetivo de la prueba es idear una solución para el punto 1 que es el Modelo de Fuga, tambien la solucion de cualquiera de los puntos del numeral dos
+
+
+---
+
+## Punto1
+
+En este caso, se requiere establecer la probabilidad que un cliente en una de sus líneas de negocio (Crédito) se vaya o no. Para esto se tiene un histórico de datos de los clientes que han solicitado un tipo de retiro y los que no lo han expresado.
+
+---
