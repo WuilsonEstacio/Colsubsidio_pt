@@ -23,7 +23,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 3. [Modelo de Fuga](#Modelo-de-fuga)  
    3.1 [Exploración y Evaluación de Datos (EDA)](#Eda)  
       3.1.1 [Data Quality](#Data-Quality)  
-      3.1.2 [Estadísticas](#Estadísticas)  
+      3.1.2 [Estadísticas y descriptivos](#Estadísticas-descriptivas)  
       3.1.3 [Hipótesis preliminares](#Hipótesis-preliminares)  
 4. [Ejercicios de numeral Dos](#Ejercicios-de-numeral-dos)  
 5. [Análisis de punto 3](#Análisis-de-punto-3)  
@@ -118,13 +118,25 @@ Para este modelo de fuga inicialmente para ello cargamos los datos de train (tra
 
 ### Data-Quality
 1 Valores nulos se identificaron solo en la siguientes colunas:
-- Gestionable           48589
-- Cancelacion           48589
-- ANO_MES               48589
-- TIPO                  48589
-- Retencion             48589
-- estrato               45885
+- Gestionable:           48589   →   0.97
+- Cancelacion:           48589   →   0.97
+- ANO_MES:               48589   →   0.97
+- TIPO:                  48589   →   0.97 
+- Retencion:             48589   →   0.97
+- estrato:               45885   →   0.97
+- aqui claramente observamos el tipo de columna, su cantidad en nulos y su porcentaje respecto al total de los datos.
   
+2 Duplicados
+- No se encontraron Id duplicados
+- No se encontraron casos donde Fecha.Proceso < Fecha.Expedicion
+
+### Estadísticas-descriptivas
+De los datos 
+
+
+
+
+
 
 
 # Ejercicios-de-numeral-dos
