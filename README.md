@@ -199,7 +199,7 @@ En ambos géneros se mantiene la jerarquía:
 - Los niveles educativos más altos (**técnico/tecnológico**) no eliminan la salida, pero presentan cifras menores que primaria.  
 
 
-
+- **Diagnostic Plots (`Diagnostico de variables continuas`)**
 <p align="center">
   <img src="./Imagenes/Diagnostic1.png", title="Diagnostic1" width="500"/>
 </p>
