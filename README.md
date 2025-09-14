@@ -20,13 +20,13 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 ## Tabla de Contenido
 1. [Introducción](#introducción)  
 2. [Objetivo](#objetivo)  
-3. [Modelo de Fuga](#modelo-de-fuga)  
-   3.1 [Exploración y Evaluación de Datos (EDA)](#eda)  
-      3.1.1 [Data Quality](#data-quality)  
-      3.1.2 [Estadísticas](#estadísticas)  
-      3.1.3 [Hipótesis preliminares](#hipótesis-preliminares)  
-4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
-5. [Análisis de punto 3](#análisis-de-punto-3)  
+3. [Modelo de Fuga](#Modelo-de-fuga)  
+   3.1 [Exploración y Evaluación de Datos (EDA)](#Eda)  
+      3.1.1 [Data Quality](#Data-quality)  
+      3.1.2 [Estadísticas](#Estadísticas)  
+      3.1.3 [Hipótesis preliminares](#Hipótesis-preliminares)  
+4. [Ejercicios de numeral Dos](#Ejercicios-de-numeral-dos)  
+5. [Análisis de punto 3](#Análisis-de-punto-3)  
 
 
 
@@ -57,7 +57,7 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 
 ---
 
-# modelo-de-fuga
+# Modelo-de-fuga
 
 ### Objetivo: En este caso, se requiere establecer la probabilidad que un cliente en una de sus líneas de negocio (Crédito) se vaya o no. Para esto se tiene un histórico de datos de los clientes que han solicitado un tipo de retiro y los que no lo han expresado.
 
@@ -112,8 +112,8 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 - **bono_lonchera** → (1: Tiene derecho a Bono Lonchera, 2: No tiene derecho)  
 ---
 
-# ejercicios-de-numeral-dos
+# Ejercicios-de-numeral-dos
 
 ---
 
-# análisis-de-punto-3
+# Análisis-de-punto-3
