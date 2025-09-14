@@ -32,6 +32,6 @@ Una de ellas, la **UES de Crédito**, atiende las necesidades de la población (
 
 Pero existen otras UES, como se muestra en la siguiente imagen:  
 
-![Diagrama UES Colsubsidio](./UES_Colsubsidio.png)
+![Diagrama UES Colsubsidio](../imagenes/UES_Colsubsidio.png)
 
 
