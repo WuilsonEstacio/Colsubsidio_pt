@@ -133,7 +133,7 @@ Para este modelo de fuga inicialmente para ello cargamos los datos de train (tra
 ### Estadísticas-descriptivas
 De los datos se encontraron que los mas frecuentes tipos de cancelacion son los siguientes
 <p align="center">
-  <img src="./Imagenes/UES_Colsubsidio.png" alt="top 10 Motivos Cancelacion" title="top 10 Motivos Cancelacion" width="500"/>
+  <img src="./Imagenes/top 10 Motivos Cancelacion.png" alt="top 10 Motivos Cancelacion" title="top 10 Motivos Cancelacion" width="500"/>
 </p>
 
 
