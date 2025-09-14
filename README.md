@@ -193,13 +193,13 @@ En ambos géneros se mantiene la jerarquía:
 
 ---
 
-## 🔹 Implicaciones estadísticas
+### 🔹 Implicaciones estadísticas
 - Existe un **patrón homogéneo de abandono según nivel educativo**: la **primaria concentra la mayor pérdida** en ambos géneros.  
 - La diferencia más visible se da en **primaria**, con hombres más afectados que mujeres.  
 - Los niveles educativos más altos (**técnico/tecnológico**) no eliminan la salida, pero presentan cifras menores que primaria.  
 
 
-- **Diagnostic Plots (`Diagnostico de variables continuas`)**
+## **Diagnostic Plots (`Diagnostico de variables continuas`)**
 <p align="center">
   <img src="./Imagenes/Diagnostic1.png", title="Diagnostic1" width="500"/>
 </p>
