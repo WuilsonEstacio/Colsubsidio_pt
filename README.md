@@ -21,7 +21,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 1. [Introducción](#introducción)  
 2. [Objetivo](#objetivo)  
 3. [Modelo de Fuga](#Modelofuga)
-4. [Ejercicios de numeral Dos](#Ejercicios2)
+4. [Ejercicios de numeral Dos](#Ejercicios)
 5. [Analisis de punto 3](#Analisis)
 
 
