@@ -162,6 +162,104 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
   <img src="./Imagenes/Distribución de Género y nivel_educativo.png" alt="Distribución de Género y nivel_educativo" title="Distribución de Género y nivel_educativo" width="500"/>
 </p>
 
+## 🔹 Hallazgos principales de acuerdo a Distribución de Género y nivel_educativo
+
+### Diferencias por género
+
+**Mujeres (F):**
+- Mayor proporción en **primaria** (340 casos).  
+- Le siguen **técnico/tecnológico** (273) y **secundaria** (71).  
+
+**Hombres (M):**
+- También dominan en **primaria** (397 casos), que es incluso mayor que en mujeres.  
+- Luego **técnico/tecnológico** (260) y **secundaria** (71).  
+
+**Patrón común:**  
+En ambos géneros se mantiene la jerarquía:  
+`primaria > técnico/tecnológico > secundaria`
+
+---
+
+### Concentración en nivel educativo bajo
+- En ambos géneros, el grueso de las salidas ocurre en personas con **primaria**.  
+- Esto sugiere que el **nivel educativo podría estar asociado a mayor probabilidad de salida**, reflejando posible menor estabilidad o menor retención.  
+
+---
+
+### Comparación de género en el mismo nivel educativo
+- En **primaria**, los hombres que se fueron (397) superan a las mujeres (340).  
+- En **técnico/tecnológico**, las mujeres tienen una ligera ventaja (273 vs 260).  
+- En **secundaria**, ambos géneros presentan exactamente la misma cantidad (71).  
+
+---
+
+## 🔹 Implicaciones estadísticas
+- Existe un **patrón homogéneo de abandono según nivel educativo**: la **primaria concentra la mayor pérdida** en ambos géneros.  
+- La diferencia más visible se da en **primaria**, con hombres más afectados que mujeres.  
+- Los niveles educativos más altos (**técnico/tecnológico**) no eliminan la salida, pero presentan cifras menores que primaria.  
+
+
+
+<p align="center">
+  <img src="./Imagenes/Diagnostic1.png", title="Diagnostic1" width="500"/>
+</p>
+
+<p align="center">
+  <img src="./Imagenes/Diagnostic2.png", title="Diagnostic2" width="500"/>
+</p>
+
+<p align="center">
+  <img src="./Imagenes/Diagnostic3.png", title="Diagnostic3" width="500"/>
+</p>
+
+
+## 🔹 Análisis Estadístico de Variables
+
+### 🔹 Edad
+- Distribución bastante uniforme entre **20 y 65 años**.  
+- **Media y mediana ≈ 40 años** → población balanceada.  
+- **Skew ≈ 0** y **curtosis negativa** → no hay colas largas ni concentración fuerte.  
+- Variable relativamente estable.  
+
+---
+
+### 🔹 Saldo y Saldos.Mes.Ant
+- Claramente **asimétricos a la derecha** (Skew ~ 6, curtosis > 60).  
+- La mayoría presenta saldos bajos, pero existen pocos casos con montos muy elevados.  
+- En el **boxplot** se observa gran cantidad de **outliers sobre el percentil 75**.  
+
+---
+
+### 🔹 Pagos.Mes.Ant y Vtas.Mes.Ant
+- Presentan **sesgo extremo** (Skew > 20, curtosis > 1000).  
+- La gran mayoría de usuarios tiene consumos/pagos bajos.  
+- Unos pocos concentran **montos millonarios**.  
+
+---
+
+### 🔹 Edad.Mora
+- La **mediana es cero días** → la mayoría está al día.  
+- Existen **outliers que alcanzan miles de días en mora**.  
+- **Sesgo positivo (Skew ~ 6)**, indicador de concentración fuerte en pocos casos críticos.  
+
+---
+
+### 🔹 Intereses y Cuotas de Manejo
+- Colas largas a la derecha.  
+- La mayoría paga montos bajos.  
+- Existen **valores atípicos muy altos** en pocos individuos.  
+
+---
+
+## 🔹 Conclusiones Globales
+- **Edad**: variable estable y representativa.  
+- **Variables financieras** (Saldo, Pagos, Ventas, Intereses, Avances) → presentan **alta asimetría y outliers**, requieren **normalización/transformación**.  
+- **Edad.Mora**: clave para segmentar riesgo → mayoría sin mora vs minoría altamente morosa.  
+- **AÑO_MES**: evidencia **sesgo temporal** → debe controlarse en el análisis.  
+
+
+
+
 
 
 # Ejercicios-de-numeral-dos
