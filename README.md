@@ -20,9 +20,13 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 ## Tabla de Contenido
 1. [Introducción](#introducción)  
 2. [Objetivo](#objetivo)  
-3. [Modelo de Fuga](#Modelofuga)
-4. [Ejercicios de numeral Dos](#Ejercicios)
-5. [Analisis de punto 3](#Analisis)
+3. [Modelo de Fuga](#modelo-de-fuga)  
+   3.1 [EDA](#eda)  
+      3.1.1 [Data Quality](#data-quality)  
+      3.1.2 [Estadísticas](#estadísticas)  
+      3.1.3 [Hipótesis preliminares](#hipótesis-preliminares)  
+4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
+5. [Análisis de punto 3](#análisis-de-punto-3)  
 
 
 
