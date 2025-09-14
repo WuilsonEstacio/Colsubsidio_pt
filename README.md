@@ -1,11 +1,11 @@
 <h1 align="center">Colsubsidio_pt</h1>
 
-<p align="center"><strong>Desarrollo prueba técnica Colsubsidio</strong></p>
+<div align="center">
 
-<p align="center">
-  <b>Responsable:
-  </b> Wuilson Adolfo Estacio Rojas<br/>
-  <b>Analista de incorporación:
-  </b> Yeimmy Verónica Bustos Moreno<br/>
-  <b>Fecha:</b> 12-09-2025
-</p>
+# Desarrollo prueba técnica Colsubsidio
+
+**Responsable:** Wuilson Adolfo Estacio Rojas  
+**Analista de incorporación:** Yeimmy Verónica Bustos Moreno  
+**Fecha:** 12-09-2025  
+
+</div>
