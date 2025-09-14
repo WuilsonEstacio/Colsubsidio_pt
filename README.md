@@ -114,8 +114,9 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 
 
 ## EDA
-Para este modelo de fuga inicialmente para ello cargamos los datos de train (train_test_demograficas,train_test_subsidios, train) para la exploracion de los datos
+Para este modelo de fuga inicialmente para ello cargamos los datos de train (train_test_demograficas,train_test_subsidios, train) para la exploracion de los datos, con un total de 50001 clientes unicos o Id unicos
 
+### Data Quality
 
 
 # Ejercicios-de-numeral-dos
