@@ -20,7 +20,9 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 ## Tabla de Contenido
 1. [Introducción](#introducción)  
 2. [Objetivo](#objetivo)  
-3. [Metodo](#Modelofuga) 
+3. [Modelo de Fuga](#Modelofuga)
+4. [Ejercicios de numeral Dos](#Ejercicios2)
+5. [Analisis de punto 3](#Analisis)
 
 
 
@@ -56,3 +58,9 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 En este caso, se requiere establecer la probabilidad que un cliente en una de sus líneas de negocio (Crédito) se vaya o no. Para esto se tiene un histórico de datos de los clientes que han solicitado un tipo de retiro y los que no lo han expresado.
 
 ---
+
+## Ejercicios
+
+---
+
+## Analisis
