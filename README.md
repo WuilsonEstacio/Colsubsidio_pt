@@ -159,7 +159,7 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
 
 - **Distribución de Género y nivel_educativo (`Distribución de Género y nivel_educativo`)**
 <p align="center">
-  <img src="./Imagenes/Distribución de Género y nivel_educativo" alt="Distribución de Género y nivel_educativo" title="Distribución de Género y nivel_educativo" width="500"/>
+  <img src="./Imagenes/Distribución de Género y nivel_educativo.png" alt="Distribución de Género y nivel_educativo" title="Distribución de Género y nivel_educativo" width="500"/>
 </p>
 
 
