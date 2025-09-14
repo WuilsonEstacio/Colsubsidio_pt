@@ -46,7 +46,7 @@ Pero existen otras UES, como se muestra en la siguiente imagen:
 ---
 
 ## Objetivo
-El objetivo de la prueba es idear una solución para el punto 1 que es el Modelo de Fuga, tambien la solucion de cualquiera de los puntos del numeral dos
+El objetivo de la prueba es idear una solución para el punto uno que es el Modelo de Fuga dado en el documento Data_Scientist_Test_2023.html el cual tiene un  peso del 75%, tambien la solucion de cualquiera de los puntos del numeral dos con un peso del 15% y finalizar con el desarrollo del numeral 3 con un peso del 10%
 
 
 ---
