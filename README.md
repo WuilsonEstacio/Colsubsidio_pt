@@ -53,7 +53,7 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 
 ---
 
-## Modelofuga
+# Modelofuga
 
 ### Objetivo: En este caso, se requiere establecer la probabilidad que un cliente en una de sus líneas de negocio (Crédito) se vaya o no. Para esto se tiene un histórico de datos de los clientes que han solicitado un tipo de retiro y los que no lo han expresado.
 
@@ -108,8 +108,8 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 - **bono_lonchera** → (1: Tiene derecho a Bono Lonchera, 2: No tiene derecho)  
 ---
 
-## Ejercicios
+# Ejercicios
 
 ---
 
-## Analisis
+# Analisis
