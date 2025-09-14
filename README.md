@@ -21,7 +21,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 1. [Introducción](#introducción)  
 2. [Objetivo](#objetivo)  
 3. [Modelo de Fuga](#modelo-de-fuga)  
-   3.1 [EDA](#eda)  
+   3.1 [Exploración y Evaluación de Datos (EDA)](#eda)  
       3.1.1 [Data Quality](#data-quality)  
       3.1.2 [Estadísticas](#estadísticas)  
       3.1.3 [Hipótesis preliminares](#hipótesis-preliminares)  
@@ -57,7 +57,7 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 
 ---
 
-# Modelofuga
+# modelo-de-fuga
 
 ### Objetivo: En este caso, se requiere establecer la probabilidad que un cliente en una de sus líneas de negocio (Crédito) se vaya o no. Para esto se tiene un histórico de datos de los clientes que han solicitado un tipo de retiro y los que no lo han expresado.
 
@@ -112,8 +112,8 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 - **bono_lonchera** → (1: Tiene derecho a Bono Lonchera, 2: No tiene derecho)  
 ---
 
-# Ejercicios
+# ejercicios-de-numeral-dos
 
 ---
 
-# Analisis
+# análisis-de-punto-3
