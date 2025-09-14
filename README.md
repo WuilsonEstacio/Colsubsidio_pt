@@ -131,13 +131,36 @@ Para este modelo de fuga inicialmente para ello cargamos los datos de train (tra
 - No se encontraron casos donde Fecha.Proceso < Fecha.Expedicion
 
 ### Estadísticas-descriptivas
-De los datos se encontraron que los mas frecuentes tipos de cancelacion son los siguientes
+De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01, de fecha maxima en 2018-03-01, donde los motivos mas frecuentes tipos de cancelacion son los siguientes
 <p align="center">
   <img src="./Imagenes/top 10 Motivos Cancelacion1.png", title="top 10 Motivos Cancelacion" width="500"/>
 </p>
 
+- **TIPO (`Tipo de Tarjeta que tenian quienes se fueron`)**  
+  - > Tipo de tarjeta: Cupo → 1106, Amparo → 306
 
+- **Retencion (`Se realizó una retención o no`)**
+  - > Tipo Retencion:  no efectiva  → 1239, efectiva →  173
+     
+- **Genero (`Con que genero se identifica el cliente Hombre o Mujer`)**
+  - > Tipo Genero:  Masculino → 25126 → 0.50% , Femenino → 24875 → 0.49%
 
+- **Edad (`Edad de los clinetes`)**
+  - Máximo: 65
+  - Mínimo: 18
+  - Promedio:  41 
+  - Desviación Estándar: ~13
+
+- **PAC (`Número de personas a cargo`)**
+  - Máximo: 63
+  - Mínimo: 0
+  - Promedio:  2 
+  - Desviación Estándar: ~0.1
+
+- **Distribución de Género y nivel_educativo (`Distribución de Género y nivel_educativo`)**
+<p align="center">
+  <img src="./Imagenes/Distribución de Género y nivel_educativo" alt="Distribución de Género y nivel_educativo" title="Distribución de Género y nivel_educativo" width="500"/>
+</p>
 
 
 
