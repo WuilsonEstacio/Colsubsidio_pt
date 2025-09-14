@@ -112,6 +112,12 @@ El objetivo de la prueba es idear una solución para el punto uno que es el Mode
 - **bono_lonchera** → (1: Tiene derecho a Bono Lonchera, 2: No tiene derecho)  
 ---
 
+
+## EDA
+Para este modelo de fuga inicialmente para ello cargamos los datos de train (train_test_demograficas,train_test_subsidios, train) para la exploracion de los datos
+
+
+
 # Ejercicios-de-numeral-dos
 
 ---
