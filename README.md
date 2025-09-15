@@ -115,7 +115,7 @@ Objetivo: En este caso, se requiere establecer la probabilidad que un cliente en
 - **bono_lonchera** → (1: Tiene derecho a Bono Lonchera, 2: No tiene derecho)  
 ---
 ## Calidad_Data
-En esta parte se crea un scrip quye verifica que luego de tener el modelo siempre vengan los datos con cierta calidad, como por ejemplo que no falte nincuna columnas, o que nunguna de x o y columnas permitan mulos y cuales si permiten nulos, que las fechas vengan correctas, que cumpla ciertas reglas de negocio, etc se debe ir poniedo para ir asegurando la calidad de la data entrante al modelo., este codigo es el Calidad de datos entrantes.ipynb
+En esta parte se implementa un script que verifica que, una vez entrenado el modelo, los datos de entrada cumplan con estándares mínimos de calidad. Entre las validaciones se incluyen la existencia de todas las columnas requeridas, la restricción de valores nulos en campos críticos (permitiéndolos solo en los definidos como opcionales), la correcta conversión y consistencia de formatos de fecha, el cumplimiento de reglas de negocio específicas y la verificación de un volumen mínimo de registros. De esta manera, el código Calidad de datos entrantes.ipynb actúa como un control preventivo para garantizar la integridad y confiabilidad de la información que alimenta al modelo.
 
 ---
 ## EDA
