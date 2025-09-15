@@ -25,7 +25,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
      - 3.1.1 [Data Quality](#data-quality)  
      - 3.1.2 [Estadísticas y descriptivos](#estadísticas-descriptivas)  
    - 3.2 [Definición del Modelo](#Definición-del-Modelo)
-     - 3.2.1 [Flujo de Datos](Flujo-de-Datos)
+     - 3.2.1 [Flujo Datos](#Flujo-Datos)  
 4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
 5. [Análisis de punto 3](#análisis-de-punto-3)
 
