@@ -157,6 +157,29 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
   - Promedio:  2 
   - Desviación Estándar: ~0.1
 
+- **Meses De Duracion antes de churn (`Número de meses que duro la persona afiliada antes de churn`)**
+  - Máximo: 138
+  - Mínimo: 0
+  - Promedio:  27
+  - Mediana:   16
+  - q1:   8
+  - q3:   39 
+
+- **Dias de la semana que mas realizaron churn**
+- De las bajas organizadas por dia podemos ver que el dia domingo es el dia que mayor presenta bajas
+<p align="center">
+  <img src="./Imagenes/Bajas por dia.png", title="Bajas por dia" width="500"/>
+</p>
+
+
+- **Bajas por mes (`Cantidad de clientes que se fueron de a cuerdo al mes`)**
+- De las bajas organizadas por mes podemos ver que el mes de diciembre presenta mas casos
+<p align="center">
+  <img src="./Imagenes/Bajas por mes.png", title="Bajas por mes" width="500"/>
+</p>
+  - Nota segun los datos y teniendo una vista general a ellos nos percatamos que la mayor cantidad es estos estan agrupados en la fecha 2018-04 con un total de 48589 lo cuales mas del 90% de los datos agrupados en una sola fecha.
+  - 
+
 - **Distribución de Género y nivel_educativo (`Distribución de Género y nivel_educativo`)**
 <p align="center">
   <img src="./Imagenes/Distribución de Género y nivel_educativo.png" alt="Distribución de Género y nivel_educativo" title="Distribución de Género y nivel_educativo" width="500"/>
@@ -256,6 +279,7 @@ En ambos géneros se mantiene la jerarquía:
 - **Variables financieras** (Saldo, Pagos, Ventas, Intereses, Avances) → presentan **alta asimetría y outliers**, requieren **normalización/transformación**.  
 - **Edad.Mora**: clave para segmentar riesgo → mayoría sin mora vs minoría altamente morosa.  
 - **AÑO_MES**: evidencia **sesgo temporal** → debe controlarse en el análisis.  
+
 
 
 
