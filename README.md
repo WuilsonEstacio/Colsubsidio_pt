@@ -167,14 +167,14 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
 - **Dias de la semana que mas realizaron churn**
 - De las bajas organizadas por dia podemos ver que el dia domingo es el dia que mayor presenta bajas
 <p align="center">
-  <img src="./Imagenes/Bajas por dia.png", title="Bajas por dia" width="700"/>
+  <img src="./Imagenes/Bajas por dia.png", title="Bajas por dia" width="600"/>
 </p>
 
 
 - **Bajas por mes (`Cantidad de clientes que se fueron de a cuerdo al mes`)**
 - De las bajas organizadas por mes podemos ver que el mes de diciembre presenta mas casos
 <p align="center">
-  <img src="./Imagenes/Bajas por mes.png", title="Bajas por mes" width="700"/>
+  <img src="./Imagenes/Bajas por mes.png", title="Bajas por mes" width="600"/>
 </p>
 
 ### Análisis de bajas por mes
@@ -206,7 +206,7 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
 
 - **Distribución de Género y nivel_educativo (`Distribución de Género y nivel_educativo`)**
 <p align="center">
-  <img src="./Imagenes/Distribución de Género y nivel_educativo.png" alt="Distribución de Género y nivel_educativo" title="Distribución de Género y nivel_educativo" width="700"/>
+  <img src="./Imagenes/Distribución de Género y nivel_educativo.png" alt="Distribución de Género y nivel_educativo" title="Distribución de Género y nivel_educativo" width="600"/>
 </p>
 
 ## 🔹 Hallazgos principales de acuerdo a Distribución de Género y nivel_educativo
@@ -248,15 +248,15 @@ En ambos géneros se mantiene la jerarquía:
 
 ## **Diagnostic Plots (`Diagnostico de variables continuas`)**
 <p align="center">
-  <img src="./Imagenes/Diagnostic1.png", title="Diagnostic1" width="700"/>
+  <img src="./Imagenes/Diagnostic1.png", title="Diagnostic1" width="600"/>
 </p>
 
 <p align="center">
-  <img src="./Imagenes/Diagnostic2.png", title="Diagnostic2" width="700"/>
+  <img src="./Imagenes/Diagnostic2.png", title="Diagnostic2" width="600"/>
 </p>
 
 <p align="center">
-  <img src="./Imagenes/Diagnostic3.png", title="Diagnostic3" width="700"/>
+  <img src="./Imagenes/Diagnostic3.png", title="Diagnostic3" width="600"/>
 </p>
 
 
