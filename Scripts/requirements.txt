@@ -57,6 +57,8 @@ httpx-sse==0.4.1
 huggingface-hub==0.34.4
 humanfriendly==10.0
 idna==3.10
+imbalanced-learn==0.14.0
+imblearn==0.0
 importlib_metadata==8.7.0
 importlib_resources==6.5.2
 ipykernel==6.30.0
@@ -80,6 +82,7 @@ langchain-experimental==0.3.4
 langchain-google-genai==2.1.9
 langchain-text-splitters==0.3.9
 langsmith==0.4.14
+lightgbm==4.6.0
 markdown-it-py==4.0.0
 MarkupSafe==3.0.2
 marshmallow==3.26.1
@@ -180,6 +183,7 @@ watchfiles==1.1.0
 wcwidth==0.2.13
 websocket-client==1.8.0
 websockets==15.0.1
+xgboost==3.0.5
 yarl==1.20.1
 zipp==3.23.0
 zstandard==0.24.0
