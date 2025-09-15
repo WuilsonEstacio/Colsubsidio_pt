@@ -435,10 +435,160 @@ Complementar con técnicas de selección de variables (mutual information, featu
 el punto indica lo siguiente:
 A. (15%) Desarrollar una pregunta de diferencia de grupos para resolver con prueba de hipótesis (H1, H0)
 y se nos pide resolver lo siguiente:
-- • Obtener descriptivos: media, mediana, asimetría
-- • Realizar pruebas de normalidad (plantear la hipótesis de normalidad)
-- • Aplicar a los mismos datos, tanto la prueba paramétrica como la no paramétrica para dos grupos independientes (Contestar a la pregunta realizada con base en los resultados de las pruebas).
+- Obtener descriptivos: media, mediana, asimetría
+- Realizar pruebas de normalidad (plantear la hipótesis de normalidad)
+- Aplicar a los mismos datos, tanto la prueba paramétrica como la no paramétrica para dos grupos independientes (Contestar a la pregunta realizada con base en los resultados de las pruebas).
 
+```python
+# --- 0. Importar las bibliotecas necesarias ---
+import numpy as np
+from scipy import stats
+
+# --- 1. Definir los datos de los grupos ---
+grupo1_data = [
+    66.180, 41.420, 81.880, 67.205, 58.626, 64.678, 74.439, 98.250, 39.465, 75.064,
+    59.585, 66.086, 66.616, 41.374, 66.9, 39, 55.405, 46.824, 64.529, 64.517,
+    65.166, 70.703, 77.391, 47.910, 66.116, 63.797, 53.051, 69.012, 60.368, 49.748,
+    39.8, 34, 37.602, 66.948, 68.314, 85.354, 69.872, 85.009, 58.953, 41.744,
+    91.509, 61.548, 37.981, 86.317, 59.479, 57.588, 53.0, 59, 46.234, 87.828,
+    66.038, 65.175, 60.214, 74.662
+]
+
+grupo2_data = [
+    0.621, 0.867, 0.550, 0.658, 0.794, 0.738, 0.855, 0.708, 0.774, 0.700,
+    0.776, 0.904, 0.751, 0.921, 0.724, 0.754, 0.568, 0.867, 0.601, 0.725,
+    0.798, 0.776, 0.835, 0.816, 0.842, 0.824, 0.706, 0.802, 0.738, 0.975,
+    0.859, 0.644, 0.638, 0.809, 0.658, 0.824, 0.603, 0.855, 0.728, 0.838,
+    0.932, 0.782, 0.727, 0.829, 0.809, 0.907, 0.871, 0.686, 0.750, 0.745, 0.662
+]
+
+# Convertir las listas a arrays de NumPy para facilitar los cálculos
+grupo1 = np.array(grupo1_data)
+grupo2 = np.array(grupo2_data)
+
+# Nivel de significancia
+alpha = 0.05
+
+print("="*50)
+print("ANÁLISIS ESTADÍSTICO PARA DOS GRUPOS INDEPENDIENTES")
+print("="*50)
+
+# --- 2. Obtener descriptivos: media, mediana, asimetría ---
+print("\n--- A. ANÁLISIS DESCRIPTIVO ---")
+print(f"Grupo 1 (n={len(grupo1)}):")
+print(f"  Media: {np.mean(grupo1):.3f}")
+print(f"  Mediana: {np.median(grupo1):.3f}")
+print(f"  Asimetría (Skewness): {stats.skew(grupo1):.3f}\n")
+
+print(f"Grupo 2 (n={len(grupo2)}):")
+print(f"  Media: {np.mean(grupo2):.3f}")
+print(f"  Mediana: {np.median(grupo2):.3f}")
+print(f"  Asimetría (Skewness): {stats.skew(grupo2):.3f}")
+
+# --- 3. Realizar pruebas de normalidad (Shapiro-Wilk) ---
+print("\n--- B. PRUEBAS DE NORMALIDAD (Shapiro-Wilk) ---")
+print("H₀: Los datos siguen una distribución normal.")
+print("H₁: Los datos no siguen una distribución normal.")
+
+# Grupo 1
+stat_s1, p_s1 = stats.shapiro(grupo1)
+print(f"\nGrupo 1: Estadístico W = {stat_s1:.3f}, p-valor = {p_s1:.3f}")
+if p_s1 > alpha:
+    print(f"  Decisión: No se rechaza H₀. Se asume normalidad (p > {alpha}).")
+else:
+    print(f"  Decisión: Se rechaza H₀. No se asume normalidad (p <= {alpha}).")
+
+# Grupo 2
+stat_s2, p_s2 = stats.shapiro(grupo2)
+print(f"\nGrupo 2: Estadístico W = {stat_s2:.3f}, p-valor = {p_s2:.3f}")
+if p_s2 > alpha:
+    print(f"  Decisión: No se rechaza H₀. Se asume normalidad (p > {alpha}).")
+else:
+    print(f"  Decisión: Se rechaza H₀. No se asume normalidad (p <= {alpha}).")
+
+# --- 4. Aplicar pruebas paramétrica y no paramétrica ---
+
+# Primero, comprobamos la homogeneidad de varianzas para la prueba t
+print("\n--- C. PRUEBA DE HOMOGENEIDAD DE VARIANZAS (Levene) ---")
+print("H₀: Las varianzas de los grupos son iguales.")
+print("H₁: Las varianzas de los grupos son diferentes.")
+stat_l, p_l = stats.levene(grupo1, grupo2)
+print(f"\nResultado: Estadístico F = {stat_l:.2f}, p-valor = {p_l}")
+if p_l > alpha:
+    print(f"  Decisión: No se rechaza H₀. Se asume que las varianzas son iguales (p > {alpha}).")
+    equal_variances = True
+else:
+    print(f"  Decisión: Se rechaza H₀. Las varianzas son diferentes (p <= {alpha}).")
+    equal_variances = False
+
+print("\n--- D. APLICACIÓN DE PRUEBAS DE HIPÓTESIS ---")
+print("Pregunta: ¿Existe una diferencia significativa entre los dos grupos?")
+print("H₀: μ₁ = μ₂ (No hay diferencia entre las medias de los grupos)")
+print("H₁: μ₁ ≠ μ₂ (Existe una diferencia entre las medias de los grupos)")
+
+# Prueba Paramétrica: t de Student para muestras independientes
+print("\n1. Prueba Paramétrica: t de Student para Muestras Independientes")
+if not equal_variances:
+    print("(Se aplicará la corrección de Welch porque las varianzas no son iguales)")
+
+stat_t, p_t = stats.ttest_ind(grupo1, grupo2, equal_var=equal_variances)
+print(f"  Estadístico t = {stat_t:.3f}")
+print(f"  p-valor = {p_t}")
+if p_t < alpha:
+    print(f"  Conclusión: Se rechaza H₀. Existe una diferencia estadísticamente significativa entre los grupos (p < {alpha}).")
+else:
+    print(f"  Conclusión: No se rechaza H₀. No hay evidencia de una diferencia significativa (p >= {alpha}).")
+
+
+# Prueba No Paramétrica: U de Mann-Whitney
+print("\n2. Prueba No Paramétrica: U de Mann-Whitney")
+stat_u, p_u = stats.mannwhitneyu(grupo1, grupo2, alternative='two-sided')
+print(f"  Estadístico U = {stat_u}")
+print(f"  p-valor = {p_u}")
+if p_u < alpha:
+    print(f"  Conclusión: Se rechaza H₀. Existe una diferencia estadísticamente significativa entre las distribuciones de los grupos (p < {alpha}).")
+else:
+    print(f"  Conclusión: No se rechaza H₀. No hay evidencia de una diferencia significativa (p >= {alpha}).")
+
+print("\n" + "="*50)
+print("CONCLUSIÓN FINAL DEL EJERCICIO")
+print("="*50)
+print("Ambas pruebas, la paramétrica (t de Welch) y la no paramétrica (U de Mann-Whitney),")
+print(f"arrojaron p-valores extremadamente bajos (p < {alpha}), lo que proporciona evidencia")
+print("contundente para rechazar la hipótesis nula. Por lo tanto, se concluye que")
+print("existe una diferencia muy significativa entre el Grupo 1 y el Grupo 2.")
+```
+Con lo que tendremos el siguiente analisis estadistico
+
+==================================================
+### ANÁLISIS ESTADÍSTICO PARA DOS GRUPOS INDEPENDIENTES
+==================================================
+
+--- A. ANÁLISIS DESCRIPTIVO ---
+Grupo 1 (n=54):
+  - Media: 62.138
+  - Mediana: 64.523
+  - Asimetría (Skewness): 0.116
+
+Grupo 2 (n=51):
+  - Media: 0.767
+  - Mediana: 0.776
+  - Asimetría (Skewness): -0.215
+
+--- B. PRUEBAS DE NORMALIDAD (Shapiro-Wilk) ---
+H₀: Los datos siguen una distribución normal.
+H₁: Los datos no siguen una distribución normal.
+
+Grupo 1: Estadístico W = 0.969, p-valor = 0.171
+  - Decisión: No se rechaza H₀. Se asume normalidad (p > 0.05).
+
+Grupo 2: Estadístico W = 0.987, p-valor = 0.860
+  - Decisión: No se rechaza H₀. Se asume normalidad (p > 0.05).
+...
+Ambas pruebas, la paramétrica (t de Welch) y la no paramétrica (U de Mann-Whitney),
+arrojaron p-valores extremadamente bajos (p < 0.05), lo que proporciona evidencia
+contundente para rechazar la hipótesis nula. Por lo tanto, se concluye que
+existe una diferencia muy significativa entre el Grupo 1 y el Grupo 2. consistente bajo métodos paramétricos y no paramétricos.
 
 ---
 
