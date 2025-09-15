@@ -576,7 +576,7 @@ Grupo 2 (n=51):
   - Asimetría (Skewness): -0.215
 
 --- B. PRUEBAS DE NORMALIDAD (Shapiro-Wilk) ---
-H₀: Los datos siguen una distribución normal.
+H₀: Los datos siguen una distribución normal.<br/>
 H₁: Los datos no siguen una distribución normal.
 
 Grupo 1: Estadístico W = 0.969, p-valor = 0.171
