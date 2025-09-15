@@ -177,7 +177,32 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
 <p align="center">
   <img src="./Imagenes/Bajas por mes.png", title="Bajas por mes" width="500"/>
 </p>
-  - **Nota** segun los datos y teniendo una vista general a ellos nos percatamos que la mayor cantidad es estos estan agrupados en la fecha 2018-04 con un total de 48589 lo cuales mas del 90% de los datos agrupados en una sola fecha.
+
+---
+### Análisis de bajas por mes
+
+## 📊 Lo que muestran los datos
+
+- **Enero 2017 (157)** y **diciembre 2017 (181)** fueron los meses con más bajas.  
+- Entre **febrero y noviembre de 2017**, las salidas se mantuvieron estables dentro del rango **80–116**.  
+- En **2018**, los meses medidos (febrero con 71 y marzo con 77) aún muestran cifras relevantes, aunque ligeramente por debajo del promedio de 2017.  
+- El mínimo fue **81 en abril 2017** y el máximo **181 en diciembre 2017**, casi el doble de diferencia entre un mes y otro.
+
+## 🔍 Posibles patrones
+
+- **Estacionalidad / fin de año:**  
+  Diciembre marca un pico que puede relacionarse con gastos de temporada, ajustes financieros o vencimientos de contratos/subsidios.  
+  Enero también aparece alto, lo que podría ser un efecto rezagado del mismo ciclo.  
+
+- **Estabilidad en el resto del año:**  
+  Entre febrero y noviembre de 2017, las bajas se mantuvieron bastante homogéneas (alrededor de **85–110**).  
+  Esto sugiere que, fuera de los picos de inicio y cierre de año, la salida de clientes sigue un patrón constante.  
+
+- **Tendencia en 2018:**  
+  En los datos disponibles, los primeros meses de 2018 muestran una **leve reducción** comparados con el promedio de 2017, aunque aún dentro del rango de los meses más bajos del año anterior.  
+  Esto podría indicar ajustes en políticas o mejoras en la retención de clientes.
+
+- **Nota** segun los datos y teniendo una vista general a ellos nos percatamos que la mayor cantidad es estos estan agrupados en la fecha 2018-04 con un total de 48589 lo cuales mas del 90% de los datos agrupados en una sola fecha.
   
 ---
 
