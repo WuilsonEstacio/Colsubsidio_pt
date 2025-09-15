@@ -23,8 +23,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 3. [Modelo de Fuga](#Modelo-de-fuga)  
    3.1 [Exploración y Evaluación de Datos (EDA)](#Eda)  
       3.1.1 [Data Quality](#Data-Quality)  
-      3.1.2 [Estadísticas y descriptivos](#Estadísticas-descriptivas)  
-      3.1.3 [Hipótesis preliminares](#Hipótesis-preliminares)  
+      3.1.2 [Estadísticas y descriptivos](#Estadísticas-descriptivas)
 4. [Ejercicios de numeral Dos](#Ejercicios-de-numeral-dos)  
 5. [Análisis de punto 3](#Análisis-de-punto-3)  
 
@@ -179,16 +178,16 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
 </p>
 
 ---
-### Análisis de bajas por mes
+### 🔹 Análisis de bajas por mes
 
-## 📊 Lo que muestran los datos
+## Lo que muestran los datos
 
 - **Enero 2017 (157)** y **diciembre 2017 (181)** fueron los meses con más bajas.  
 - Entre **febrero y noviembre de 2017**, las salidas se mantuvieron estables dentro del rango **80–116**.  
 - En **2018**, los meses medidos (febrero con 71 y marzo con 77) aún muestran cifras relevantes, aunque ligeramente por debajo del promedio de 2017.  
 - El mínimo fue **81 en abril 2017** y el máximo **181 en diciembre 2017**, casi el doble de diferencia entre un mes y otro.
 
-## 🔍 Posibles patrones
+## Posibles patrones
 
 - **Estacionalidad / fin de año:**  
   Diciembre marca un pico que puede relacionarse con gastos de temporada, ajustes financieros o vencimientos de contratos/subsidios.  
