@@ -635,6 +635,7 @@ summary(modelo)
 ==============================
 ### ANÁLISIS ESTADÍSTICO 
 ==============================
+</p>
 Para interpretar un ANOVA, es necesario comprobar que los residuos del modelo siguen una distribución normal.
 
 - Hipótesis nula (H₀): los residuos provienen de una distribución normal.
