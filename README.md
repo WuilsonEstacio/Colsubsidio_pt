@@ -432,7 +432,39 @@ Usar modelos no lineales y multivariados: árboles de decisión, ensembles (Rand
 Complementar con técnicas de selección de variables (mutual information, feature importance) para identificar los predictores más relevantes.
 ---
 
-### Entrenamiento_del_Modelo_de_Fuga
+## Entrenamiento_del_Modelo_de_Fuga
+El Modelo de Fuga se desarrollo en el scrip Entrenamiento Modelo.ipynb, alli se encuentran los 6 modelos desarrollados LogisticRegression, DecisionTree, RandomForest, XGBoost, LightGBM, BernoulliNB
+se comparan estos 6 modelos, teneiendo en cuenta el Recall, AUC y Accuracy, para esto dado que se tiene un dasbalance de clase respecto al Target </p>
+Target
+-0    0.969701
+-1    0.030299
+Se hace necesario primero balancear el modelo, para ello fue necesario valancear las clases con SMOTE y de manera estadistica reprecentativa, se comparan cada uno de los modelos obteniendo las siguientes curvas ROC
+
+<p align="center">
+  <img src="./Imagenes/Roc_General.png", title="Curvas ROC" width="600"/>
+</p>
+Donde podemos observar que hay 4 modelos que segun esta curva sobresalen como lo son  DecisionTree, RandomForest, XGBoost, LightGBM, pero no solo porello nos vasamos para escoger el mejor modelo, es necesario mirar tambien el Recall y Accuracy.
+En una tabla comparativa donde se tienen en cuenta esas caracteristicas vemos que el mejor modelo hasta el momento es el DecisionTree
+<p align="center">
+  <img src="./Imagenes/Comparativa Metricas.png", title="Comparativa de metricas por modelo" width="700"/>
+</p>
+Ahora si hechamos un vistaso a la Distribucion de probabilidad, Grafica inferior izquierda observamos que la mayoria de los casos de la clase No Target = 0 se concentran en probabilidades bajas entre 0-0.2, para el caso de Target = 1 tenemos que este
+aparece en un rango mas amplio pero con solapamiento con No Target, lo que dificulta un poco en separar limpiamente ambas clases, estos dos resultados  generan una interpretacion de que el modelo tiene capacidad de asignar scores razonables, pero no generara separacion perfecta
+pues la superposición sugiere que hay limitaciones en la información de las variables para discriminar completamente.
+<p align="center">
+  <img src="./Imagenes/Metricas1 Decisiontree.png", title="Metricas de probabilidad y de Umbral" width="600"/>
+</p>
+si miramos la grafica superior derecha podemos decir de esta que el Accuracy Aumenta al subir el umbral, porque el modelo predice más conservadoramente la clase mayoritaria (“No Target”), lo cual mejora exactitud global en un dataset desbalanceado.
+en cuanto al Recall, este disminuye al aumentar el umbral, porque sacrificamos detecciones de la clase minoritaria. En umbrales bajos, recall es más alto, pero con peor precisión, en F1-Score: Se mantiene bajo (máx ~0.35), porque el desequilibrio de
+clases penaliza fuertemente la precisión en “Target”. Esto refleja que no hay un umbral bien definido que balancee bien ambas métricas, osea aqui hay que definir si se sacrifica precision o recall. osea Bajo umbral → más recall, pero demasiados falsos positivos.
+Alto umbral → más precisión, pero se pierden muchos casos de "Target".
+<p align="center">
+  <img src="./Imagenes/Metricas2 Decisiontree.png", title="Metricas y Matriz confucion" width="600"/>
+</p>
+Para la grafica de la matriz de confusion tenemos que No Target | 0: 4492 verdaderos negativos, 931 falsos positivos. esto nos dice que el modelo funciona razonablemente bien en esta clase.
+Target | 1: 290 verdaderos positivos, 134 falsos negativos. El modelo captura un 68.4% de los Target =1, lo cual es aceptable en términos de recall para un dataset algo desbalanceado, aunque la precisión es baja (23.7%).
+por lo que dabdole una interpretacion a esto vemos que el modelo tiende a sobrepredecir “No Target” pero logra capturar un número importante de positivos (recall decente). esto nos dice que es un modelo decente.
+la curva ROC de 0.818 indica que  el modelo aun estando algo desbalanceado tiene buena capacidad de discriminacion, dado que valores superiores al 0.8 suelen conciderarsen en buen nivel.
 
 ---
 
