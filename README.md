@@ -468,7 +468,7 @@ la curva ROC de 0.818 indica que  el modelo aun estando algo desbalanceado tiene
 <p align="center">
   <img src="./Imagenes/Metricas3 Decisiontree.png", title="Comparativa de metricas por modelo" width="700"/>
 </p>
-En la grafica superior derecha tenemos las Features de importancia para el modelo DecisionTree, vemos que este modelo se apoya casi exclusivamente en la variable de Saldo que explica cerca del 60% de la predicción: es la variable clave para discriminar entre Target y No Target,
+En la grafica superior tenemos las Features de importancia para el modelo DecisionTree, vemos que este modelo se apoya casi exclusivamente en la variable de Saldo que explica cerca del 60% de la predicción: es la variable clave para discriminar entre Target y No Target,
 Variables financieras como Pagos.Mes.Ant y Disponible.Avances aportan información adicional, aunque mucho menor. En contraste, variables demográficas (edad, estado civil) y contractuales (cuota_monetaria, contrato) tienen muy poco peso, lo que indica que son poco útiles para el modelo.
 en resumen vemos que el riesgo de target =1 o mejor dicho de que el cliente salga de la compañia recae sobre el comportamiento financiaro reciente, mientras las variables personales (edad, estado civil, contrato, etc.) aportan muy poca capacidad de predicción al modelo en comparación con las variables financieras.
 por lo que para mejorar el modelo se deben añadir mas variables financieras, como capacidad de pago, salario mensual, relacion cuota/ingresos mensuales,Endeudamiento_global=(Deuda total / ingreso mensual.), Tarjetas de credito, cupo Utilizado, cupo Disponible, promedio de dias de mora.
