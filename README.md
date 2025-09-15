@@ -388,6 +388,16 @@ La preparación y preprocesamiento de los datos se llevó a cabo en el cuaderno 
 └───────────────────┘
 ```
 
+<p align="center">
+  <img src="./Imagenes/Correlacion variable target.png", title="Correlacion variable target" width="600"/>
+</p>
+
+<p align="center">
+  <img src="./Imagenes/Matriz correlacion1.png", title="Matriz correlacion1" width="500"/>
+</p>
+
+
+
 # Ejercicios-de-numeral-dos
 
 ---
