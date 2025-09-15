@@ -893,4 +893,574 @@ Con \\(C = 8\\):
 
 En la práctica, se pueden derivar **docenas de métricas útiles solo de la matriz**.
 
+
+Métricas de matriz de confusión para clasificación multiclase
+
+Este repositorio resume las principales métricas que pueden extraerse de una matriz de confusión en contextos de clasificación multiclase. A partir de una matriz de confusión con 
+𝐶
+C clases se pueden derivar decenas de métricas útiles para evaluar el comportamiento de un modelo sin necesidad de conocer sus probabilidades de salida.
+
+Conteos básicos por clase
+
+Para cada clase 
+𝑐
+c de la matriz de confusión se definen los siguientes conteos fundamentales:
+
+Verdaderos positivos (TP_c) – El valor de la diagonal en la fila y columna de la clase 
+𝑐
+c. Corresponde a los ejemplos correctamente clasificados como 
+𝑐
+c.
+
+Falsos positivos (FP_c) – La suma de los elementos de la columna 
+𝑐
+c fuera de la diagonal. Son los ejemplos de otras clases predichos incorrectamente como 
+𝑐
+c.
+
+Falsos negativos (FN_c) – La suma de los elementos de la fila 
+𝑐
+c fuera de la diagonal. Son los ejemplos de la clase 
+𝑐
+c clasificados como otra clase.
+
+Verdaderos negativos (TN_c) – Todos los demás ejemplos que no pertenecen a 
+𝑐
+c y no se predicen como 
+𝑐
+c. Se calcula como 
+T
+N
+𝑐
+=
+𝑁
+−
+T
+P
+𝑐
+−
+F
+P
+𝑐
+−
+F
+N
+𝑐
+TN
+c
+	​
+
+=N−TP
+c
+	​
+
+−FP
+c
+	​
+
+−FN
+c
+	​
+
+, siendo 
+𝑁
+N el total de observaciones.
+
+Tasas y medidas por clase
+
+Con los conteos anteriores se calculan diversas tasas y medidas de desempeño por clase:
+
+Métrica	Fórmula	Interpretación
+Precisión (PPV)	
+P
+r
+e
+c
+i
+s
+i
+o
+n
+𝑐
+=
+T
+P
+𝑐
+T
+P
+𝑐
++
+F
+P
+𝑐
+Precision
+c
+	​
+
+=
+TP
+c
+	​
+
++FP
+c
+	​
+
+TP
+c
+	​
+
+	​
+
+	Proporción de predicciones de 
+𝑐
+c que son correctas.
+Sensibilidad / Recall	
+R
+e
+c
+a
+l
+l
+𝑐
+=
+T
+P
+𝑐
+T
+P
+𝑐
++
+F
+N
+𝑐
+Recall
+c
+	​
+
+=
+TP
+c
+	​
+
++FN
+c
+	​
+
+TP
+c
+	​
+
+	​
+
+	Proporción de ejemplos de 
+𝑐
+c detectados correctamente.
+Especificidad (TNR)	
+T
+N
+R
+𝑐
+=
+T
+N
+𝑐
+T
+N
+𝑐
++
+F
+P
+𝑐
+TNR
+c
+	​
+
+=
+TN
+c
+	​
+
++FP
+c
+	​
+
+TN
+c
+	​
+
+	​
+
+	Capacidad para evitar falsos positivos de 
+𝑐
+c.
+Tasa de falsos positivos (FPR)	
+F
+P
+R
+𝑐
+=
+1
+−
+T
+N
+R
+𝑐
+=
+F
+P
+𝑐
+F
+P
+𝑐
++
+T
+N
+𝑐
+FPR
+c
+	​
+
+=1−TNR
+c
+	​
+
+=
+FP
+c
+	​
+
++TN
+c
+	​
+
+FP
+c
+	​
+
+	​
+
+	Frecuencia con que se confunden otras clases con 
+𝑐
+c.
+Tasa de falsos negativos (FNR)	
+F
+N
+R
+𝑐
+=
+1
+−
+R
+e
+c
+a
+l
+l
+𝑐
+=
+F
+N
+𝑐
+F
+N
+𝑐
++
+T
+P
+𝑐
+FNR
+c
+	​
+
+=1−Recall
+c
+	​
+
+=
+FN
+c
+	​
+
++TP
+c
+	​
+
+FN
+c
+	​
+
+	​
+
+	Proporción de ejemplos de 
+𝑐
+c que se pierden.
+Valor predictivo negativo (NPV)	
+N
+P
+V
+𝑐
+=
+T
+N
+𝑐
+T
+N
+𝑐
++
+F
+N
+𝑐
+NPV
+c
+	​
+
+=
+TN
+c
+	​
+
++FN
+c
+	​
+
+TN
+c
+	​
+
+	​
+
+	Probabilidad de que un ejemplo no etiquetado como 
+𝑐
+c sea realmente de otra clase.
+Tasa de descubrimiento falsa (FDR)	
+F
+D
+R
+𝑐
+=
+1
+−
+P
+r
+e
+c
+i
+s
+i
+o
+n
+𝑐
+FDR
+c
+	​
+
+=1−Precision
+c
+	​
+
+	Proporción de predicciones de 
+𝑐
+c que son erróneas.
+Tasa de falta de predicción (FOR)	
+F
+O
+R
+𝑐
+=
+1
+−
+N
+P
+V
+𝑐
+FOR
+c
+	​
+
+=1−NPV
+c
+	​
+
+	Proporción de negativos predichos para 
+𝑐
+c que en realidad son 
+𝑐
+c.
+F1-score	
+𝐹
+1
+𝑐
+=
+2
+⋅
+P
+r
+e
+c
+i
+s
+i
+o
+n
+𝑐
+⋅
+R
+e
+c
+a
+l
+l
+𝑐
+P
+r
+e
+c
+i
+s
+i
+o
+n
+𝑐
++
+R
+e
+c
+a
+l
+l
+𝑐
+F1
+c
+	​
+
+=
+Precision
+c
+	​
+
++Recall
+c
+	​
+
+2⋅Precision
+c
+	​
+
+⋅Recall
+c
+	​
+
+	​
+
+	Media armónica entre precisión y recall.
+Balanced accuracy (por clase)	
+B
+A
+𝑐
+=
+1
+2
+(
+R
+e
+c
+a
+l
+l
+𝑐
++
+T
+N
+R
+𝑐
+)
+BA
+c
+	​
+
+=
+2
+1
+	​
+
+(Recall
+c
+	​
+
++TNR
+c
+	​
+
+)	Valor medio entre sensibilidad y especificidad.
+Prevalencia	
+P
+r
+e
+v
+𝑐
+=
+T
+P
+𝑐
++
+F
+N
+𝑐
+𝑁
+Prev
+c
+	​
+
+=
+N
+TP
+c
+	​
+
++FN
+c
+	​
+
+	​
+
+	Fracción de ejemplos verdaderos de la clase 
+𝑐
+c.
+Prevalencia predicha	
+P
+r
+e
+v
+P
+r
+e
+d
+𝑐
+=
+T
+P
+𝑐
++
+F
+P
+𝑐
+𝑁
+PrevPred
+c
+	​
+
+=
+N
+TP
+c
+	​
+
++FP
+c
+	​
+
+	​
+
+	Fracción de ejemplos que el modelo predice co
 ---
