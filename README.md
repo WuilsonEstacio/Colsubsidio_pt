@@ -45,7 +45,7 @@ Una de ellas, la **UES de Crédito**, atiende las necesidades de la población (
 Pero existen otras UES, como se muestra en la siguiente imagen:  
 
 <p align="center">
-  <img src="./Imagenes/UES_Colsubsidio.png" alt="UES Disponibles" title="UES Disponibles" width="500"/>
+  <img src="./Imagenes/UES_Colsubsidio.png" alt="UES Disponibles" title="UES Disponibles" width="800"/>
 </p>
 
 ---
