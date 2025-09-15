@@ -429,8 +429,16 @@ Usar modelos no lineales y multivariados: árboles de decisión, ensembles (Rand
 Complementar con técnicas de selección de variables (mutual information, feature importance) para identificar los predictores más relevantes.
 
 
+---
 
 # Ejercicios-de-numeral-dos
+el punto indica lo siguiente:
+A. (15%) Desarrollar una pregunta de diferencia de grupos para resolver con prueba de hipótesis (H1, H0)
+y se nos pide resolver lo siguiente:
+- • Obtener descriptivos: media, mediana, asimetría
+- • Realizar pruebas de normalidad (plantear la hipótesis de normalidad)
+- • Aplicar a los mismos datos, tanto la prueba paramétrica como la no paramétrica para dos grupos independientes (Contestar a la pregunta realizada con base en los resultados de las pruebas).
+
 
 ---
 
