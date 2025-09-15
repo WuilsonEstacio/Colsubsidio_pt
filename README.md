@@ -439,6 +439,7 @@ y se nos pide resolver lo siguiente:
 - Realizar pruebas de normalidad (plantear la hipótesis de normalidad)
 - Aplicar a los mismos datos, tanto la prueba paramétrica como la no paramétrica para dos grupos independientes (Contestar a la pregunta realizada con base en los resultados de las pruebas).
 
+Ejecucion en python
 ```python
 # --- 0. Importar las bibliotecas necesarias ---
 import numpy as np
@@ -597,7 +598,7 @@ D. (15%) Con los siguientes datos, realizar un ANOVA factorial:
 - Realizar pruebas de normalidad (plantear la hipótesis de normalidad).
 - (Contestar a la pregunta realizada con base en los resultados de laspruebas).
 
-
+Ejecucion en R
 ```R
 # Datos originales
 medida <- c(2.1, 2.2, 1.8, 2, 1.9, 2.2, 2.6, 2.7, 2.5, 2.8, 
@@ -631,6 +632,8 @@ summary(modelo)
 <p align="center">
   <img src="./Imagenes/Punto 2 D en R.png", title="Solucion Punto 2-D" width="600"/>
 </p>
+
+- El test de Shapiro–Wilk es una de las pruebas estadísticas más utilizadas para verificar si un conjunto de datos sigue una distribución normal.
 
 ==============================
 ### ANÁLISIS ESTADÍSTICO 
