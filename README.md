@@ -2,9 +2,9 @@
 
 # Desarrollo prueba técnica Colsubsidio
 
-**Responsable:** Wuilson Adolfo Estacio Rojas  
-**Analista de incorporación:** Yeimmy Verónica Bustos Moreno 
-**Jefe gestión de la información:** Camilo Garzón Márquez 
+**Responsable:** Wuilson Adolfo Estacio Rojas<br/>  
+**Analista de incorporación:** Yeimmy Verónica Bustos Moreno<br/> 
+**Jefe gestión de la información:** Camilo Garzón Márquez<br/> 
 **Fecha:** 15-09-2025  
 
 </div>
