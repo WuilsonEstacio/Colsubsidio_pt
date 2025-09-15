@@ -16,7 +16,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 
 
 ## Tabla de Contenido
-1. [Introducción](#introducción)  
+1. [Introducción](#Introducción)  
 2. [Objetivo](#objetivo)
 3. [Calidad Data entrante](#Calidad_Data)  
 4. [Modelo de Fuga](#modelo-de-fuga)  
@@ -33,7 +33,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 
 
 
-## introduccion
+## Introducción
 
 ### ¿Qué es Colsubsidio?
 
