@@ -20,13 +20,13 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 ## Tabla de Contenido
 1. [Introducción](#introducción)  
 2. [Objetivo](#objetivo)  
-3. [Modelo de Fuga](#Modelo-de-fuga)  
-   3.1 [Exploración y Evaluación de Datos (EDA)](#Eda)  
-      3.1.1 [Data Quality](#Data-Quality)  
-      3.1.2 [Estadísticas y descriptivos](#Estadísticas-descriptivas)
-   3.2 [Desarrollo Modelo](#Desarrollo-Modelo)
-5. [Ejercicios de numeral Dos](#Ejercicios-de-numeral-dos)  
-6. [Análisis de punto 3](#Análisis-de-punto-3)  
+3. [Modelo de Fuga](#modelo-de-fuga)  
+   - 3.1 [Exploración y Evaluación de Datos (EDA)](#eda)  
+     - 3.1.1 [Data Quality](#data-quality)  
+     - 3.1.2 [Estadísticas y descriptivos](#estadísticas-descriptivas)  
+   - 3.2 [Desarrollo Modelo](#desarrollo-modelo)  
+4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
+5. [Análisis de punto 3](#análisis-de-punto-3)
 
 
 
