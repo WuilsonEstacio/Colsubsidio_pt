@@ -812,6 +812,7 @@ De una matriz de confusión de N clases se obtienen, para cada clase n
   TN_c = N - TP_c - FP_c - FN_c
   \]
 
+- Tasas y medidas por clase
 ---
 
 | Métrica                                | Fórmula                                                                                                        | Interpretación                                                                     |
@@ -844,8 +845,8 @@ De una matriz de confusión de N clases se obtienen, para cada clase n
 
 Con \\(C = 8\\):
 
-- **32 conteos** (TP/FP/FN/TN × 8).  
-- **≈ 10–12 tasas por clase** (ej. Precision, Recall, F1, TNR, FPR, FNR, NPV, FDR, FOR, BA…) → **80–96 métricas**.  
+- **32 conteos** (TP/FP/FN/TN × 8). donde para cada clase en un problema multiclase se pueden defini 4 conteos basicos por clase×8 clases=32 conteos en total
+- **≈ 10–12 tasas por clase** (ej. Precision, Recall, F1, TNR, FPR, FNR, NPV, FDR, FOR, BA…) → **80–96 métricas**.  que salen de 10 metricas x 8 clases =80 metricas, 12 metricas x 8 clases =96 metricas
 - **≥ 10 métricas globales** (macro/micro/weighted de P/R/F1, accuracy, balanced accuracy, κ, MCC, etc.).  
 
 
