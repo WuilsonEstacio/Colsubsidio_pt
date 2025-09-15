@@ -1,5 +1,3 @@
-<h1 align="center">Colsubsidio_pt</h1>
-
 <div align="center">
 
 # Desarrollo prueba técnica Colsubsidio
