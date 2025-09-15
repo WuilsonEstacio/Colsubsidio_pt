@@ -658,3 +658,7 @@ por lo que:
 ---
 
 # Análisis-de-punto-3
+
+<p align="center">
+  <img src="./Imagenes/Punto 3.png", title="Pregunta Punto 3" width="600"/>
+</p>
