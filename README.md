@@ -459,13 +459,20 @@ en cuanto al Recall, este disminuye al aumentar el umbral, porque sacrificamos d
 clases penaliza fuertemente la precisión en “Target”. Esto refleja que no hay un umbral bien definido que balancee bien ambas métricas, osea aqui hay que definir si se sacrifica precision o recall. osea Bajo umbral → más recall, pero demasiados falsos positivos.
 Alto umbral → más precisión, pero se pierden muchos casos de "Target".
 <p align="center">
-  <img src="./Imagenes/Metricas2 Decisiontree.png", title="Metricas y Matriz confucion" width="800"/>
+  <img src="./Imagenes/Metricas2 Decisiontree.png", title="Metricas y Matriz confucion" width="900"/>
 </p>
 Para la grafica de la matriz de confusion tenemos que No Target | 0: 4492 verdaderos negativos, 931 falsos positivos. esto nos dice que el modelo funciona razonablemente bien en esta clase.
 Target | 1: 290 verdaderos positivos, 134 falsos negativos. El modelo captura un 68.4% de los Target =1, lo cual es aceptable en términos de recall para un dataset algo desbalanceado, aunque la precisión es baja (23.7%).
 por lo que dabdole una interpretacion a esto vemos que el modelo tiende a sobrepredecir “No Target” pero logra capturar un número importante de positivos (recall decente). esto nos dice que es un modelo decente.
 la curva ROC de 0.818 indica que  el modelo aun estando algo desbalanceado tiene buena capacidad de discriminacion, dado que valores superiores al 0.8 suelen conciderarsen en buen nivel.
-
+<p align="center">
+  <img src="./Imagenes/Metricas3 Decisiontree.png", title="Comparativa de metricas por modelo" width="700"/>
+</p>
+En la grafica superior derecha tenemos las Features de importancia para el modelo DecisionTree, vemos que este modelo se apoya casi exclusivamente en la variable de Saldo que explica cerca del 60% de la predicción: es la variable clave para discriminar entre Target y No Target,
+Variables financieras como Pagos.Mes.Ant y Disponible.Avances aportan información adicional, aunque mucho menor. En contraste, variables demográficas (edad, estado civil) y contractuales (cuota_monetaria, contrato) tienen muy poco peso, lo que indica que son poco útiles para el modelo.
+en resumen vemos que el riesgo de target =1 o mejor dicho de que el cliente salga de la compañia recae sobre el comportamiento financiaro reciente, mientras las variables personales (edad, estado civil, contrato, etc.) aportan muy poca capacidad de predicción al modelo en comparación con las variables financieras.
+por lo que para mejorar el modelo se deben añadir mas variables financieras, como capacidad de pago, salario mensual, relacion cuota/ingresos mensuales,Endeudamiento_global=(Deuda total / ingreso mensual.), Tarjetas de credito, cupo Utilizado, cupo Disponible, promedio de dias de mora.
+ 
 ---
 
 # Ejercicios-de-numeral-dos
