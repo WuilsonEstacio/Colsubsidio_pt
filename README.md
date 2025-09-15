@@ -17,18 +17,19 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
 
 ## Tabla de Contenido
 1. [Introducción](#introducción)  
-2. [Objetivo](#objetivo)  
-3. [Modelo de Fuga](#modelo-de-fuga)  
-   - 3.1 [Exploración y Evaluación de Datos (EDA)](#eda)  
-     - 3.1.1 [Data Quality](#data-quality)  
-     - 3.1.2 [Estadísticas y descriptivos](#estadísticas-descriptivas)  
-   - 3.2 [Definición del Modelo](#Definición-del-Modelo)
-     - 3.2.1 [Flujo Datos](#Flujo-Datos)
-     - 3.2.3 [Entrenamiento del modelo](#Entrenamiento_del_Modelo_de_Fuga)
-4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
-5. [Análisis de punto 3](#análisis-de-punto-3)
- - 5.1.1 [Interpretación técnica de la matriz](#Interpretación_técnica_de_la_matriz)
- - 5.1.2 [Cuáles y cuántas métricas puede obtener de dicha matriz](#Metricas_para_dicha_Matriz) 
+2. [Objetivo](#objetivo)
+3. [Calidad Data entrante](#Calidad_Data)  
+4. [Modelo de Fuga](#modelo-de-fuga)  
+   - 4.1 [Exploración y Evaluación de Datos (EDA)](#eda)  
+     - 4.1.1 [Data Quality](#data-quality)  
+     - 4.1.2 [Estadísticas y descriptivos](#estadísticas-descriptivas)  
+   - 4.2 [Definición del Modelo](#Definición-del-Modelo)
+     - 4.2.1 [Flujo Datos](#Flujo-Datos)
+     - 4.2.3 [Entrenamiento del modelo](#Entrenamiento_del_Modelo_de_Fuga)
+5. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
+6. [Análisis de punto 3](#análisis-de-punto-3)
+ - 6.1.1 [Interpretación técnica de la matriz](#Interpretación_técnica_de_la_matriz)
+ - 6.1.2 [Cuáles y cuántas métricas puede obtener de dicha matriz](#Metricas_para_dicha_Matriz) 
 
 
 
@@ -113,10 +114,12 @@ Objetivo: En este caso, se requiere establecer la probabilidad que un cliente en
 - **sub_vivenda** → (1: Ha solicitado y desembolsado subsidio de vivienda, 2: No ha solicitado)  
 - **bono_lonchera** → (1: Tiene derecho a Bono Lonchera, 2: No tiene derecho)  
 ---
+## Calidad_Data
+En esta parte se crea un scrip quye verifica que luego de tener el modelo siempre vengan los datos con cierta calidad, como por ejemplo que no falte nincuna columnas, o que nunguna de x o y columnas permitan mulos y cuales si permiten nulos, que las fechas vengan correctas, que cumpla ciertas reglas de negocio, etc se debe ir poniedo para ir asegurando la calidad de la data entrante al modelo., este codigo es el Calidad de datos entrantes.ipynb
 
-
+---
 ## EDA
-Para este modelo de fuga inicialmente para ello cargamos los datos de train (train_test_demograficas,train_test_subsidios, train) para la exploracion de los datos, con un total de 50001 clientes unicos o Id unicos, esta exploracion se realiza en el cuaderdo de python Modelo de Fuga -eda
+Para este modelo de fuga inicialmente para ello cargamos los datos de train (train_test_demograficas,train_test_subsidios, train) para la exploracion de los datos, con un total de 50001 clientes unicos o Id unicos, esta exploracion se realiza en el cuaderdo de python Modelo de Fuga -eda.ipynb
 
 ### Data-Quality
 1 Valores nulos se identificaron solo en la siguientes colunas:
@@ -483,7 +486,7 @@ y se nos pide resolver lo siguiente:
 - Realizar pruebas de normalidad (plantear la hipótesis de normalidad)
 - Aplicar a los mismos datos, tanto la prueba paramétrica como la no paramétrica para dos grupos independientes (Contestar a la pregunta realizada con base en los resultados de las pruebas).
 
-Ejecucion en python
+Ejecucion en python en el cuaderno Punto 2A.ipynb
 ```python
 # --- 0. Importar las bibliotecas necesarias ---
 import numpy as np
@@ -642,7 +645,7 @@ D. (15%) Con los siguientes datos, realizar un ANOVA factorial:
 - Realizar pruebas de normalidad (plantear la hipótesis de normalidad).
 - (Contestar a la pregunta realizada con base en los resultados de laspruebas).
 
-Ejecucion en R
+Ejecucion en R en el cuaderno Punto 2D.ipynb o R
 ```R
 # Datos originales
 medida <- c(2.1, 2.2, 1.8, 2, 1.9, 2.2, 2.6, 2.7, 2.5, 2.8, 
@@ -707,6 +710,7 @@ por lo que:
   <img src="./Imagenes/Punto 3.png", title="Pregunta Punto 3" width="600"/>
 </p>
 
+Parte de ello se realiza en el cuaderno Punto 3 Matriz de confucion
 
 ## Interpretación_técnica_de_la_matriz
 
