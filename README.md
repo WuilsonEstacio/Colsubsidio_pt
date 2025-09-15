@@ -24,7 +24,8 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
    - 3.1 [Exploración y Evaluación de Datos (EDA)](#eda)  
      - 3.1.1 [Data Quality](#data-quality)  
      - 3.1.2 [Estadísticas y descriptivos](#estadísticas-descriptivas)  
-   - 3.2 [Desarrollo Modelo](#desarrollo-modelo)  
+   - 3.2 [Definición del Modelo](#Definición-del-Modelo)
+     - 3.2.1 [Flujo de Datos](Flujo-de-Datos)
 4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
 5. [Análisis de punto 3](#análisis-de-punto-3)
 
@@ -307,13 +308,87 @@ En ambos géneros se mantiene la jerarquía:
 
 ---
 
-## Desarrollo-Modelo
+## Definición-del-Modelo
 La preparación y preprocesamiento de los datos se llevó a cabo en el cuaderno "Preprocesamiento Data". En esta etapa se realizó la carga de los datos de entrenamiento, la limpieza y depuración de las variables, así como la transformación y normalización de los atributos relevantes del conjunto de datos. Se analizaron posibles correlaciones temporales de la variable objetivo y se evaluó el impacto potencial de las columnas de tipo fecha sobre el target.
 
 - Durante el proceso, se trataron valores atípicos y se aplicaron técnicas de normalización utilizando el metodo de winsorize_serie, para garantizar la calidad y consistencia de los datos de entrada. Además, mediante el análisis de series temporales y la inspección de matrices de correlación, se comprobó que no existía una correlación significativa entre la variable objetivo y la segmentación por meses. Esto permitió descartar patrones estacionales laborales y validar la idoneidad de las fechas como predictoras en el modelo.
 
+### Flujo-de-Datos
 
-
+```plaintext
+┌─────────────────────────────────────┐
+│  Pasos para un desarrollo efectivo  │    
+└─────────────────────────────────────┘
+          │
+          ▼
+┌──────────────────────┐
+│  Entendimiento       │ 
+│   del problema       │
+└──────────────────────┘
+          │
+          ▼
+┌──────────────────────┐
+│  DESCARGA DE DATOS   │ 
+│  (Ingesta de Datos)  │
+└──────────────────────┘
+          │
+          ▼
+┌────────────────────────────────────────────────────┐
+│1. RECEPCIÓN DE DATOS (ARCHIVOS CSV, PARQUET, ETC.) │
+│   - Lectura de los ficheros                        │
+│   - Otras fuentes de datos                         │
+└────────────────────────────────────────────────────┘
+          │
+          ▼
+┌───────────────────────────────────────────────────────┐
+│2. PREPROCESAMIENTO Y VALIDACIÓN                       │
+│   - Limpieza de registros (valores nulos, duplicados) │
+│   - Formateo de fechas (datetime)                     │
+│   - Conversión de tipos                               │
+│   - Garantizar la integridad de los datos             │
+└───────────────────────────────────────────────────────┘
+          │
+          ▼
+┌──────────────────────────────────────────────────┐
+│3. APLICACIÓN DE LA LÓGICA (REGLA DE NEGOCIOS)    │
+│   - Para cada transacción, verificar si cumplen  │ 
+│     el criterio o los criterios del negocio      │
+└──────────────────────────────────────────────────┘
+          │
+          ▼
+┌────────────────────────────────────────────────────────────────┐
+│4. GENERACIÓN DE ATRIBUTOS (FEATURES)                           │
+│   - Calculo de diferencia en dias, meses                       |
+|   - Creacion de nuevas columnas explicativas                   |
+|   - Verificacion y calidad de todos los datos                  │
+└────────────────────────────────────────────────────────────────┘
+          │
+          ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│5. Generacion del Modelo                                                     │
+│   - Se generan varios modelos para poder obtener el de mejores resultados   |
+│   - Ajuste de Hiperparametros y nueva selecion del mejor modelo             | 
+└─────────────────────────────────────────────────────────────────────────────┘
+          │
+          ▼
+┌─────────────────────────────────────────────────────────────┐
+│6 . Carga de datos nuevamente a la nube                      |
+|    para disponibilidad del usuario,                         │
+│   - mediante Azure o AWS                                    │
+└─────────────────────────────────────────────────────────────┘
+          │
+          ▼
+┌─────────────────────────────────────────────────────────────┐
+│5. SALIDA                                                    │
+│   - Almacenamiento de resultados (CSV, Base de datos, etc.) │
+│   - Consumir los resultados en dashboards                   │
+└─────────────────────────────────────────────────────────────┘
+          │
+          ▼
+┌───────────────────┐
+│  FIN DEL PROCESO  │
+└───────────────────┘
+```
 
 # Ejercicios-de-numeral-dos
 
