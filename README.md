@@ -23,7 +23,8 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
      - 3.1.1 [Data Quality](#data-quality)  
      - 3.1.2 [Estadísticas y descriptivos](#estadísticas-descriptivas)  
    - 3.2 [Definición del Modelo](#Definición-del-Modelo)
-     - 3.2.1 [Flujo Datos](#Flujo-Datos)  
+     - 3.2.1 [Flujo Datos](#Flujo-Datos)
+     - 3.2.3 [Entrenamiento del modelo](#Entrenamiento_del_Modelo_de_Fuga)
 4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
 5. [Análisis de punto 3](#análisis-de-punto-3)
  - 5.1.1 [Interpretación técnica de la matriz](#Interpretación_técnica_de_la_matriz)
@@ -429,7 +430,9 @@ Por lo tanto, se recomienda:
 Usar modelos no lineales y multivariados: árboles de decisión, ensembles (Random Forest, XGBoost, LightGBM), entre otros.
 
 Complementar con técnicas de selección de variables (mutual information, feature importance) para identificar los predictores más relevantes.
+---
 
+### Entrenamiento_del_Modelo_de_Fuga
 
 ---
 
