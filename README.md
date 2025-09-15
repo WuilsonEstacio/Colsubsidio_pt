@@ -452,14 +452,14 @@ Ahora si hechamos un vistaso a la Distribucion de probabilidad, Grafica inferior
 aparece en un rango mas amplio pero con solapamiento con No Target, lo que dificulta un poco en separar limpiamente ambas clases, estos dos resultados  generan una interpretacion de que el modelo tiene capacidad de asignar scores razonables, pero no generara separacion perfecta
 pues la superposición sugiere que hay limitaciones en la información de las variables para discriminar completamente.
 <p align="center">
-  <img src="./Imagenes/Metricas1 Decisiontree.png", title="Metricas de probabilidad y de Umbral" width="600"/>
+  <img src="./Imagenes/Metricas1 Decisiontree.png", title="Metricas de probabilidad y de Umbral" width="800"/>
 </p>
 si miramos la grafica superior derecha podemos decir de esta que el Accuracy Aumenta al subir el umbral, porque el modelo predice más conservadoramente la clase mayoritaria (“No Target”), lo cual mejora exactitud global en un dataset desbalanceado.
 en cuanto al Recall, este disminuye al aumentar el umbral, porque sacrificamos detecciones de la clase minoritaria. En umbrales bajos, recall es más alto, pero con peor precisión, en F1-Score: Se mantiene bajo (máx ~0.35), porque el desequilibrio de
 clases penaliza fuertemente la precisión en “Target”. Esto refleja que no hay un umbral bien definido que balancee bien ambas métricas, osea aqui hay que definir si se sacrifica precision o recall. osea Bajo umbral → más recall, pero demasiados falsos positivos.
 Alto umbral → más precisión, pero se pierden muchos casos de "Target".
 <p align="center">
-  <img src="./Imagenes/Metricas2 Decisiontree.png", title="Metricas y Matriz confucion" width="600"/>
+  <img src="./Imagenes/Metricas2 Decisiontree.png", title="Metricas y Matriz confucion" width="800"/>
 </p>
 Para la grafica de la matriz de confusion tenemos que No Target | 0: 4492 verdaderos negativos, 931 falsos positivos. esto nos dice que el modelo funciona razonablemente bien en esta clase.
 Target | 1: 290 verdaderos positivos, 134 falsos negativos. El modelo captura un 68.4% de los Target =1, lo cual es aceptable en términos de recall para un dataset algo desbalanceado, aunque la precisión es baja (23.7%).
