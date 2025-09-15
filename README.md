@@ -167,18 +167,17 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
 - **Dias de la semana que mas realizaron churn**
 - De las bajas organizadas por dia podemos ver que el dia domingo es el dia que mayor presenta bajas
 <p align="center">
-  <img src="./Imagenes/Bajas por dia.png", title="Bajas por dia" width="500"/>
+  <img src="./Imagenes/Bajas por dia.png", title="Bajas por dia" width="800"/>
 </p>
 
 
 - **Bajas por mes (`Cantidad de clientes que se fueron de a cuerdo al mes`)**
 - De las bajas organizadas por mes podemos ver que el mes de diciembre presenta mas casos
 <p align="center">
-  <img src="./Imagenes/Bajas por mes.png", title="Bajas por mes" width="500"/>
+  <img src="./Imagenes/Bajas por mes.png", title="Bajas por mes" width="800"/>
 </p>
 
----
-### 🔹 Análisis de bajas por mes
+### Análisis de bajas por mes
 
 ## Lo que muestran los datos
 
