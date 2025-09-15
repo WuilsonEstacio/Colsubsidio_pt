@@ -313,7 +313,7 @@ La preparación y preprocesamiento de los datos se llevó a cabo en el cuaderno 
 
 - Durante el proceso, se trataron valores atípicos y se aplicaron técnicas de normalización utilizando el metodo de winsorize_serie, para garantizar la calidad y consistencia de los datos de entrada. Además, mediante el análisis de series temporales y la inspección de matrices de correlación, se comprobó que no existía una correlación significativa entre la variable objetivo y la segmentación por meses. Esto permitió descartar patrones estacionales laborales y validar la idoneidad de las fechas como predictoras en el modelo.
 
-### Flujo-de-Datos
+### Flujo-Datos
 
 ```plaintext
 ┌─────────────────────────────────────┐
