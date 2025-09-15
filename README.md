@@ -26,6 +26,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
      - 3.2.1 [Flujo Datos](#Flujo-Datos)  
 4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
 5. [Análisis de punto 3](#análisis-de-punto-3)
+ - 5.1.1 [Interpretación técnica de la matriz](#Punto3A) 
 
 
 
@@ -663,7 +664,7 @@ por lo que:
   <img src="./Imagenes/Punto 3.png", title="Pregunta Punto 3" width="600"/>
 </p>
 
-A) Interpretación técnica de la matriz
+A) Interpretación técnica de la matriz (Punto3A)
 
 - Estructura:
   - Filas = etiqueta real (True label).
