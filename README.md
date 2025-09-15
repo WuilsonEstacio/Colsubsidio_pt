@@ -662,3 +662,235 @@ por lo que:
 <p align="center">
   <img src="./Imagenes/Punto 3.png", title="Pregunta Punto 3" width="600"/>
 </p>
+
+A) Interpretación técnica de la matriz
+
+- Estructura:
+  - Filas = etiqueta real (True label).
+  - Columnas = etiqueta predicha (Predicted label).
+  - Cada celda (𝑖,𝑗) (i= eje x,j= eje y) es el número de ejemplos de la clase real i que el modelo predijo como j.
+  - La diagonal contiene los aciertos (TP de cada clase). Las celdas fuera de diagonal son errores: a la izquierda/derecha se ven los patrones de confusión entre clases
+- Patrones destacados en la matriz dada
+  - La clase 2:tiene un desempeño perfecto (444 aciertos, sin confusiones), y una Precisión, recall y F1 = 1.00.
+
+Ejecucion en python de la replica de la Matriz dada.
+```python
+import numpy as np
+import warnings
+# import gc
+import seaborn as sns
+import matplotlib.pyplot as plt
+# import unicodedata
+import numpy as np
+from sklearn.metrics import (
+    accuracy_score,
+    balanced_accuracy_score,
+    f1_score,
+    cohen_kappa_score,
+    matthews_corrcoef
+)
+
+from sklearn.metrics import precision_recall_fscore_support
+warnings.filterwarnings('ignore')
+
+# Matriz de confusion
+cm = np.array([
+    [12, 26,  0,  4,  7, 21,  4, 1],  # clase real 0
+    [22, 125, 0, 14, 43, 85, 12, 4],  # clase real 1
+    [ 0,  0, 444, 0,  0,  0,  0, 0],  # clase real 2
+    [ 4,  7,  0,  6,  1,  3,  0, 2],  # clase real 3
+    [ 7, 34,  0,  2, 59, 14,  6, 3],  # clase real 4
+    [13, 78,  0,  9, 26, 80,  7, 7],  # clase real 5
+    [ 0, 11,  0,  4, 13, 13,  1, 1],  # clase real 6
+    [ 1,  9,  0,  1,  3,  5,  1, 1]   # clase real 7
+])
+
+# Convertir la matriz de confusión en vectores de etiquetas verdaderas y predichas
+y_true = []
+y_pred = []
+n_classes = cm.shape[0]
+for true_label in range(n_classes):
+    for pred_label in range(n_classes):
+        count = cm[true_label, pred_label]
+        # Añadimos tantas repeticiones como indique la celda (i,j)
+        y_true += [true_label] * count
+        y_pred += [pred_label] * count
+y_true = np.array(y_true)
+y_pred = np.array(y_pred)
+
+# Calcular precisión, recall, F1-score y soporte por clase
+precision, recall, f1, support = precision_recall_fscore_support(
+    y_true, y_pred, labels=list(range(n_classes))
+)
+
+# Mostrar resultados por clase
+for cls in range(n_classes):
+    print(
+        f"Clase {cls}: "
+        f"P={precision[cls]:.3f}, "
+        f"R={recall[cls]:.3f}, "
+        f"F1={f1[cls]:.3f} "
+        f"(n={support[cls]})"
+    )
+
+
+## Variables Globales
+# 1) Exactitud micro (accuracy)
+micro_accuracy = accuracy_score(y_true, y_pred)
+
+# 2) Balanced accuracy (macro-recall)
+balanced_acc = balanced_accuracy_score(y_true, y_pred)
+
+# 3) Macro-F1 y Weighted-F1
+macro_f1 = f1_score(y_true, y_pred, average="macro")
+weighted_f1 = f1_score(y_true, y_pred, average="weighted")
+
+# 4) Cohen’s kappa
+kappa = cohen_kappa_score(y_true, y_pred)
+
+# 5) MCC multiclass
+mcc = matthews_corrcoef(y_true, y_pred)
+
+# Mostrar resultados
+print(f"Exactitud (micro): {micro_accuracy:.3f}")
+print(f"Balanced accuracy (macro-recall): {balanced_acc:.3f}")
+print(f"Macro-F1: {macro_f1:.3f}")
+print(f"Weighted-F1: {weighted_f1:.3f}")
+print(f"Cohen’s kappa: {kappa:.3f}")
+print(f"MCC multiclass: {mcc:.3f}")
+
+```
+Salida del modelo:
+- Clase 0: P=0.203, R=0.160, F1=0.179 (n=75)
+- Clase 1: P=0.431, R=0.410, F1=0.420 (n=305)
+- Clase 2: P=1.000, R=1.000, F1=1.000 (n=444)
+- Clase 3: P=0.150, R=0.261, F1=0.190 (n=23)
+- Clase 4: P=0.388, R=0.472, F1=0.426 (n=125)
+- Clase 5: P=0.362, R=0.364, F1=0.363 (n=220)
+- Clase 6: P=0.032, R=0.023, F1=0.027 (n=43)
+- Clase 7: P=0.053, R=0.048, F1=0.050 (n=21)
+
+Metricas Globales
+- Exactitud (micro): 0.580
+- Balanced accuracy (macro-recall): 0.342
+- Macro-F1: 0.332
+- Weighted-F1: 0.577
+- Cohen’s kappa: 0.455
+- MCC multiclass: 0.456
+
+
+Clases 1 y 5: fuerte confusión cruzada.
+
+- Muchos verdaderos 1 se predicen como 5 (85).
+
+- Muchos verdaderos 5 se predicen como 1 (78). El modelo mezcla 1 ↔ 5, sugiere fronteras poco separables o desbalance
+
+Clases 6 y 7: muy baja sensibilidad (apenas 1 acierto en cada caso).
+- Recall 6 ≈ 0.023, Recall 7 ≈ 0.048; probablemente poca evidencia o variables poco informativas para esas clases.
+
+Las clases dominantes:
+- la clase 2 domina con 444 aciertos , seguida por la clase 1 con 125 aciertos y la clase 5 con 80 aciertos.
+
+Datos Generales: 
+- El modelo es excelente para la clase 2, aceptable-regular para 1, 4 y 5, y muy débil para 6 y 7. Existe confusión sistemática 1↔5. Conjunto desequilibrado, por lo que conviene ponderar por clase, remuestrear o ajustar umbrales.
+
+B. ¿Cuáles y cuántas métricas puede obtener de dicha matriz?
+
+De una matriz de confusión de N clases se obtienen, para cada clase n
+
+### Conteos básicos
+
+- **TP₍c₎**: Verdaderos positivos (celda de la diagonal).  
+- **FP₍c₎**: Falsos positivos (columna *c* fuera de la diagonal).  
+- **FN₍c₎**: Falsos negativos (fila *c* fuera de la diagonal).  
+- **TN₍c₎**: Verdaderos negativos.  
+  \[
+  TN_c = N - TP_c - FP_c - FN_c
+  \]
+
+---
+
+### Tasas / Medidas por clase
+
+- **Precisión (PPV)**  
+  \[
+  \text{Precision}_c = \frac{TP_c}{TP_c + FP_c}
+  \]
+
+- **Recall / Sensibilidad (TPR)**  
+  \[
+  \text{Recall}_c = \frac{TP_c}{TP_c + FN_c}
+  \]
+
+- **Especificidad (TNR)**  
+  \[
+  \text{TNR}_c = \frac{TN_c}{TN_c + FP_c}
+  \]
+
+- **F1-score**  
+  \[
+  F1_c = \frac{2 \cdot \text{Precision}_c \cdot \text{Recall}_c}{\text{Precision}_c + \text{Recall}_c}
+  \]
+
+- **Balanced accuracy por clase**  
+  \[
+  BA_c = \frac{\text{TPR}_c + \text{TNR}_c}{2}
+  \]
+
+- **FPR (False Positive Rate)**  
+  \[
+  FPR_c = \frac{FP_c}{FP_c + TN_c}
+  \]
+
+- **FNR (False Negative Rate)**  
+  \[
+  FNR_c = \frac{FN_c}{FN_c + TP_c}
+  \]
+
+- **NPV (Negative Predictive Value)**  
+  \[
+  NPV_c = \frac{TN_c}{TN_c + FN_c}
+  \]
+
+- **FDR (False Discovery Rate)**  
+  \[
+  FDR_c = 1 - \text{Precision}_c
+  \]
+
+- **FOR (False Omission Rate)**  
+  \[
+  FOR_c = 1 - NPV_c
+  \]
+
+- **Prevalencia (Prevalence)**  
+  \[
+  Prev_c = \frac{TP_c + FN_c}{N}
+  \]
+
+- **Prevalencia predicha (Predicted prevalence)**  
+  \[
+  \hat{Prev}_c = \frac{TP_c + FP_c}{N}
+  \]
+
+---
+
+### Agregaciones multiclass
+
+- **Macro**: promedio no ponderado (Precision/Recall/F1 macro).  
+- **Weighted**: promedio ponderado por soporte (Precision/Recall/F1 weighted).  
+- **Micro**: cuenta global de TP, FP, FN (Precision/Recall/F1 micro = exactitud global).  
+- **Exactitud global**, **Balanced accuracy macro**, **Cohen’s κ**, **MCC multiclass**.
+
+---
+
+### ¿Cuántas métricas?
+
+Con \\(C = 8\\):
+
+- **32 conteos** (TP/FP/FN/TN × 8).  
+- **≈ 10–12 tasas por clase** (ej. Precision, Recall, F1, TNR, FPR, FNR, NPV, FDR, FOR, BA…) → **80–96 métricas**.  
+- **≥ 10 métricas globales** (macro/micro/weighted de P/R/F1, accuracy, balanced accuracy, κ, MCC, etc.).  
+
+En la práctica, se pueden derivar **docenas de métricas útiles solo de la matriz**.
+
+---
