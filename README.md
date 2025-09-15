@@ -665,7 +665,7 @@ por lo que:
 </p>
 
 
-A) Interpretación_técnica_de_la_matriz
+## Interpretación_técnica_de_la_matriz
 
 - Estructura:
   - Filas = etiqueta real (True label).
