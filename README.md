@@ -177,7 +177,7 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
 <p align="center">
   <img src="./Imagenes/Bajas por mes.png", title="Bajas por mes" width="500"/>
 </p>
-  - Nota segun los datos y teniendo una vista general a ellos nos percatamos que la mayor cantidad es estos estan agrupados en la fecha 2018-04 con un total de 48589 lo cuales mas del 90% de los datos agrupados en una sola fecha.
+  - **Nota** segun los datos y teniendo una vista general a ellos nos percatamos que la mayor cantidad es estos estan agrupados en la fecha 2018-04 con un total de 48589 lo cuales mas del 90% de los datos agrupados en una sola fecha.
   
 ---
 
