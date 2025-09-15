@@ -209,7 +209,7 @@ De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01,
   <img src="./Imagenes/Distribución de Género y nivel_educativo.png" alt="Distribución de Género y nivel_educativo" title="Distribución de Género y nivel_educativo" width="600"/>
 </p>
 
-## 🔹 Hallazgos principales de acuerdo a Distribución de Género y nivel_educativo
+## Hallazgos principales de acuerdo a Distribución de Género y nivel_educativo
 
 ### Diferencias por género
 
@@ -240,7 +240,7 @@ En ambos géneros se mantiene la jerarquía:
 
 ---
 
-### 🔹 Implicaciones estadísticas
+### Implicaciones estadísticas
 - Existe un **patrón homogéneo de abandono según nivel educativo**: la **primaria concentra la mayor pérdida** en ambos géneros.  
 - La diferencia más visible se da en **primaria**, con hombres más afectados que mujeres.  
 - Los niveles educativos más altos (**técnico/tecnológico**) no eliminan la salida, pero presentan cifras menores que primaria.  
@@ -260,7 +260,7 @@ En ambos géneros se mantiene la jerarquía:
 </p>
 
 
-## 🔹 Análisis Estadístico de Variables
+## Análisis Estadístico de Variables
 
 ### 🔹 Edad
 - Distribución bastante uniforme entre **20 y 65 años**.  
