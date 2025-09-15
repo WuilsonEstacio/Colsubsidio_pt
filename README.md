@@ -45,7 +45,7 @@ Una de ellas, la **UES de Crédito**, atiende las necesidades de la población (
 Pero existen otras UES, como se muestra en la siguiente imagen:  
 
 <p align="center">
-  <img src="./Imagenes/UES_Colsubsidio.png" alt="UES Disponibles" title="UES Disponibles" width="800"/>
+  <img src="./Imagenes/UES_Colsubsidio.png" alt="UES Disponibles" title="UES Disponibles" width="700"/>
 </p>
 
 ---
@@ -132,7 +132,7 @@ Para este modelo de fuga inicialmente para ello cargamos los datos de train (tra
 ### Estadísticas-descriptivas
 De los datos se encontraron 1412 cancelaciones, iniciando con una en 2017-01-01, de fecha maxima en 2018-03-01, donde los motivos mas frecuentes tipos de cancelacion son los siguientes
 <p align="center">
-  <img src="./Imagenes/top 10 Motivos Cancelacion1.png", title="top 10 Motivos Cancelacion" width="500"/>
+  <img src="./Imagenes/top 10 Motivos Cancelacion1.png", title="top 10 Motivos Cancelacion" width="700"/>
 </p>
 
 - **TIPO (`Tipo de Tarjeta que tenian quienes se fueron`)**  
