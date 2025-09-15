@@ -393,8 +393,40 @@ La preparación y preprocesamiento de los datos se llevó a cabo en el cuaderno 
 </p>
 
 <p align="center">
-  <img src="./Imagenes/Matriz correlacion1.png", title="Matriz correlacion1" width="500"/>
+  <img src="./Imagenes/Matriz correlacion1.png", title="Matriz correlacion1" width="600"/>
 </p>
+
+## Análisis de Correlación
+
+El análisis de correlación evidencia que ninguna variable presenta una relación lineal fuerte con el Target (churn): todas las correlaciones se mantienen dentro del rango ±0.06.
+Esto sugiere que la fuga no se explica por predictores individuales, sino por la combinación de múltiples factores no lineales.
+
+🔹 Patrones observados
+
+Saldo (≈ -0.06): correlación negativa → clientes con mayores saldos presentan menor probabilidad de fuga.
+
+Pagos recientes (≈ +0.04): correlación positiva débil → podrían reflejar pagos de cierre antes de abandonar.
+
+Total de intereses (≈ -0.04): ligera correlación negativa → clientes con mayor carga de intereses tienden a mantenerse activos.
+
+Edad y estado civil: no muestran relación estadísticamente significativa con el churn.
+
+🔹 Hallazgos adicionales
+
+Existe multicolinealidad entre variables financieras (Pagos.Mes.Ant, Pago.del.Mes, Saldo, Total.Intereses), lo que sugiere:
+
+Eliminar variables redundantes, o
+
+Aplicar reducción de dimensionalidad (ej. PCA).
+
+🔹 Implicación para el modelado
+
+El churn en este dataset no depende de variables lineales aisladas, sino de interacciones complejas.
+Por lo tanto, se recomienda:
+
+Usar modelos no lineales y multivariados: árboles de decisión, ensembles (Random Forest, XGBoost, LightGBM), entre otros.
+
+Complementar con técnicas de selección de variables (mutual information, feature importance) para identificar los predictores más relevantes.
 
 
 
