@@ -26,7 +26,8 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
      - 3.2.1 [Flujo Datos](#Flujo-Datos)  
 4. [Ejercicios de numeral Dos](#ejercicios-de-numeral-dos)  
 5. [Análisis de punto 3](#análisis-de-punto-3)
- - 5.1.1 [Interpretación técnica de la matriz](#Interpretación_técnica_de_la_matriz) 
+ - 5.1.1 [Interpretación técnica de la matriz](#Interpretación_técnica_de_la_matriz)
+ - 5.1.2 [Cuáles y cuántas métricas puede obtener de dicha matriz](#Metricas_para_dicha_Matriz) 
 
 
 
@@ -796,6 +797,7 @@ Las clases dominantes:
 Datos Generales: 
 - El modelo es excelente para la clase 2, aceptable-regular para 1, 4 y 5, y muy débil para 6 y 7. Existe confusión sistemática 1↔5. Conjunto desequilibrado, por lo que conviene ponderar por clase, remuestrear o ajustar umbrales.
 
+## Metricas_para_dicha_Matriz
 B. ¿Cuáles y cuántas métricas puede obtener de dicha matriz?
 
 De una matriz de confusión de N clases se obtienen, para cada clase n
