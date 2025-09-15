@@ -24,7 +24,7 @@ Este documento describe el proceso seguido para **explorar** los datos, **identi
    3.1 [Exploración y Evaluación de Datos (EDA)](#Eda)  
       3.1.1 [Data Quality](#Data-Quality)  
       3.1.2 [Estadísticas y descriptivos](#Estadísticas-descriptivas)
-      3.1.3 [Desarrollo Modelo](#Desarrollo-Modelo)
+   3.2 [Desarrollo Modelo](#Desarrollo-Modelo)
 5. [Ejercicios de numeral Dos](#Ejercicios-de-numeral-dos)  
 6. [Análisis de punto 3](#Análisis-de-punto-3)  
 
@@ -307,7 +307,7 @@ En ambos géneros se mantiene la jerarquía:
 
 ---
 
-### Desarrollo-Modelo
+## Desarrollo-Modelo
 
 
 
