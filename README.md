@@ -432,7 +432,7 @@ Complementar con técnicas de selección de variables (mutual information, featu
 ---
 
 # Ejercicios-de-numeral-dos
-el punto indica lo siguiente:
+El punto A indica lo siguiente:
 A. (15%) Desarrollar una pregunta de diferencia de grupos para resolver con prueba de hipótesis (H1, H0)
 y se nos pide resolver lo siguiente:
 - Obtener descriptivos: media, mediana, asimetría
@@ -589,6 +589,67 @@ Ambas pruebas, la paramétrica (t de Welch) y la no paramétrica (U de Mann-Whit
 arrojaron p-valores extremadamente bajos (p < 0.05), lo que proporciona evidencia
 contundente para rechazar la hipótesis nula. Por lo tanto, se concluye que
 existe una diferencia muy significativa entre el Grupo 1 y el Grupo 2. consistente bajo métodos paramétricos y no paramétricos.
+
+---
+El punto D indica lo siguiente:
+D. (15%) Con los siguientes datos, realizar un ANOVA factorial:
+
+- Realizar pruebas de normalidad (plantear la hipótesis de normalidad).
+- (Contestar a la pregunta realizada con base en los resultados de laspruebas).
+
+
+```R
+# Datos originales
+medida <- c(2.1, 2.2, 1.8, 2, 1.9, 2.2, 2.6, 2.7, 2.5, 2.8, 
+            1.8, 1.9, 1.6, 2, 1.9, 2.1, 2, 2.2, 2.4, 2.1)
+
+factorA <- gl(4, 5)
+factorB <- factor(rep(1:5, 4))
+
+# Crear data frame
+datos <- data.frame(medida, factorA, factorB)
+
+# Modelo ANOVA sin interacción (efectos principales solamente)
+modelo <- aov(medida ~ factorA + factorB, data = datos)
+
+# Verificar residuos
+residuos <- resid(modelo)
+print("Primeros residuos:")
+print(head(residuos))
+
+# Prueba de normalidad (ahora funcionará)
+shapiro_resultado <- shapiro.test(residuos)
+print(shapiro_resultado)
+
+# ANOVA factorial
+print("ANOVA - Efectos principales:")
+summary(modelo)
+
+```
+### Resultados
+
+<p align="center">
+  <img src="./Imagenes/Punto 2 D en R.png", title="Solucion Punto 2-D" width="600"/>
+</p>
+
+==============================
+### ANÁLISIS ESTADÍSTICO 
+==============================
+Para interpretar un ANOVA, es necesario comprobar que los residuos del modelo siguen una distribución normal.
+
+- Hipótesis nula (H₀): los residuos provienen de una distribución normal.
+
+- Hipótesis alternativa (H₁): los residuos no provienen de una distribución normal.
+
+Dado que el test de Shapiro-Wilk aplicado a los residuos del modelo arrojó un estadístico W = 0.943 y un p-valor = 0.275.
+Dado que p > 0.05, no se rechaza la hipótesis nula, lo cual indica que el supuesto de normalidad se cumple.
+
+por lo que:
+- El factor A presenta un efecto altamente significativo sobre la variable medida (p < 0.001), osea influye significativamente en la variable respuesta.
+
+- El factor B no muestra un efecto estadísticamente significativo (p ≈ 0.64), sobre la variable respuesta.
+
+
 
 ---
 
